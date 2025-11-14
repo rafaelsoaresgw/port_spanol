@@ -1,0 +1,95 @@
+/*
+ * ESTE É O CÓDIGO FINAL PARA O styles.css.
+ * Ele contém Animações + Regras Fortes para REMOVER TODOS OS SCROLLBARS VÍSIVEIS.
+*/
+
+/* 1. ANIMAÇÕES DE ROTAÇÃO E PULSO */
+.animate-spin-slow {
+    animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-pulse {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+
+/* 2. REMOÇÃO FORÇADA DE TODOS OS SCROLLBARS VISÍVEIS */
+
+/* Para Chrome, Safari e Edge (Webkit) */
+body::-webkit-scrollbar, 
+html::-webkit-scrollbar,
+.min-h-screen::-webkit-scrollbar {
+    display: none;
+}
+
+/* Para Firefox */
+body {
+    scrollbar-width: none;
+}
+
+/* Para IE e Edge (versões antigas) */
+html {
+    -ms-overflow-style: none;
+}
+
+
+/* 3. REGRAS DE ROLAGEM GERAL (Para garantir que a rolagem funcione) */
+
+body {
+    /* overflow-y: auto é o padrão, mas auto é mais seguro para garantir a rolagem */
+    overflow-y: auto; 
+    height: 100%; 
+}
+
+/* Garante que o contêiner principal não crie sua própria barra de rolagem horizontal ou vertical */
+.min-h-screen {
+    overflow: hidden; 
+}
+
+
+/* 4. EFEITO DE CURSOR PISCANDO */
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.blinking-cursor {
+    font-weight: bold;
+    color: white; /* Garante que o cursor seja branco */
+    animation: blink 1s step-end infinite;
+}
+
+/* 5. EFEITO DE FUNDO EMBASSADO (BACKDROP BLUR) PARA O MENU LATERAL */
+
+/* Efeito de fundo embaçado para o body quando o menu lateral está aberto */
+body.backdrop-blur-overlay::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Fundo semi-transparente */
+    backdrop-filter: blur(8px); /* Nível de embaçamento */
+    z-index: 40; /* Deve ser menor que o z-index do sidebar (z-50) */
+    transition: background-color 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out;
+}
