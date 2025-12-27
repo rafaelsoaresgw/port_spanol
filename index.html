@@ -29,6 +29,7 @@
                         <a href="#hero" class="hover:text-cyan-400 transition-colors nav-link">INICIO</a>
                         <a href="#portfolio" class="hover:text-cyan-400 transition-colors nav-link">PORTAFOLIO</a>
                         <a href="#services" class="hover:text-cyan-400 transition-colors nav-link">SERVICIOS</a>
+                        <a href="#pricing" class="text-cyan-400 nav-link font-bold">PRECIOS</a>
                         <a href="#contact" class="hover:text-cyan-400 transition-colors nav-link">SOBRE MÍ</a>
                         <a href="#contact" class="inline-flex items-center justify-center text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary hover:bg-primary/90 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-2 rounded-full font-semibold nav-link">CONTRÁTAME</a>
                     </div>
@@ -48,6 +49,7 @@
                     <a href="#hero" class="text-white text-lg font-semibold hover:text-cyan-400 transition-colors block py-2 nav-link-sidebar">INICIO</a>
                     <a href="#portfolio" class="text-white text-lg font-semibold hover:text-cyan-400 transition-colors block py-2 nav-link-sidebar">PORTAFOLIO</a>
                     <a href="#services" class="text-white text-lg font-semibold hover:text-cyan-400 transition-colors block py-2 nav-link-sidebar">SERVICIOS</a>
+                    <a href="#pricing" class="text-cyan-400 nav-link font-bold">PRECIOS</a>
                     <a href="#contact" class="text-white text-lg font-semibold hover:text-cyan-400 transition-colors block py-2 nav-link-sidebar">SOBRE MÍ</a>
                     <a href="#contact" class="inline-flex items-center justify-center ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary hover:bg-primary/90 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-2 rounded-full font-semibold mt-auto nav-link-sidebar">CONTRÁTAME</a>
                 </nav>
@@ -228,6 +230,190 @@
                     </div>
                 </div>
             </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="pricing" class="py-32 px-4 relative">
+                <div class="container mx-auto">
+                    <div class="text-center max-w-2xl mx-auto mb-20" data-aos="fade-up">
+                        <h2 class="text-4xl md:text-5xl font-black mb-6 uppercase">Inversión y Planes</h2>
+                        <p class="text-gray-400">Soluciones modulares diseñadas para escalar junto con tu visión de negocio.</p>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-8 items-start">
+                        <div class="bg-white/5 backdrop-blur-md p-10 rounded-[2.5rem] border border-white/10 group" data-aos="fade-up">
+                            <h3 class="text-gray-400 font-bold text-sm tracking-widest mb-2 uppercase">01. Básico</h3>
+                            <div class="text-3xl font-black mb-6 uppercase">Landing Page</div>
+                            <button onclick="openPriceModal('lp')" class="w-full py-4 rounded-2xl bg-white/10 group-hover:bg-cyan-500 text-white font-bold transition-all uppercase text-xs tracking-widest">Ver Estructura</button>
+                        </div>
+                        <div class="bg-gradient-to-b from-cyan-600 to-blue-700 p-10 rounded-[2.5rem] shadow-2xl scale-105 relative z-10" data-aos="fade-up" data-aos-delay="100">
+                            <div class="absolute top-6 right-8 bg-white/20 px-3 py-1 rounded-full text-[10px] font-bold uppercase text-white">Top Tier</div>
+                            <h3 class="text-white/70 font-bold text-sm tracking-widest mb-2 uppercase">02. Avanzado</h3>
+                            <div class="text-3xl font-black text-white mb-6 uppercase">App Flutter</div>
+                            <button onclick="openPriceModal('app')" class="w-full py-4 rounded-2xl bg-white text-cyan-600 font-bold hover:bg-slate-900 hover:text-white transition-all uppercase text-xs tracking-widest">Ver Estructura</button>
+                        </div>
+                        <div class="bg-white/5 backdrop-blur-md p-10 rounded-[2.5rem] border border-white/10 group" data-aos="fade-up" data-aos-delay="200">
+                            <h3 class="text-gray-400 font-bold text-sm tracking-widest mb-2 uppercase">03. Business</h3>
+                            <div class="text-3xl font-black mb-6 uppercase">Sitio Web</div>
+                            <button onclick="openPriceModal('site')" class="w-full py-4 rounded-2xl bg-white/10 group-hover:bg-purple-500 text-white font-bold transition-all uppercase text-xs tracking-widest">Ver Estructura</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="price-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+        <div class="absolute inset-0 bg-slate-950/90 backdrop-blur-2xl" onclick="closePriceModal()"></div>
+        <div class="bg-slate-900 border border-white/10 w-full max-w-2xl p-10 rounded-[3rem] relative z-10 max-h-[90vh] overflow-y-auto">
+            <div id="modal-content"></div>
+            <button onclick="closePriceModal()" class="mt-12 w-full py-4 text-gray-500 hover:text-white border-t border-white/5 text-[10px] font-bold uppercase tracking-[0.4em]">Cerrar Detalle</button>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+
+        const details = {
+            lp: {
+                title: "Landing Page Elite",
+                intro: "Diseñada específicamente para maximizar el retorno de inversión (ROI). Esta solución de una sola página utiliza gatillos mentales y una jerarquía visual estratégica para convertir visitantes curiosos en clientes potenciales de forma inmediata.",
+                pBRL: "Desde R$ 1.200", 
+                pMXN: "Desde $4,100 MXN",
+                steps: [
+                    { t: "⚡ Core Web Vitals", d: "Optimización profunda de velocidad para carga instantánea, mejorando el ranking en Google." },
+                    { t: "🎯 Neuromarketing", d: "Arquitectura persuasiva basada en el comportamiento del usuario para aumentar las ventas." },
+                    { t: "📊 Tracking API", d: "Configuración avanzada de Pixel de Meta y Google Tag Manager para medir cada clic." }
+                ]
+            },
+            app: {
+                title: "App Flutter Native",
+                intro: "Desarrollo de aplicaciones móviles con rendimiento nativo. Una sola base de código para iOS y Android que ofrece una experiencia de usuario fluida, ideal para startups que buscan escalabilidad y robustez tecnológica.",
+                pBRL: "Desde R$ 5.500", 
+                pMXN: "Desde $18,500 MXN",
+                steps: [
+                    { t: "💎 UI/UX Premium", d: "Interfaces intuitivas con animaciones fluidas a 60 FPS para una experiencia inmersiva." },
+                    { t: "🔥 Firebase Backend", d: "Base de datos en tiempo real, autenticación segura y notificaciones push personalizadas." },
+                    { t: "🛡️ Seguridad Robusta", d: "Implementación de protocolos OAuth 2.0 y encriptación de datos de extremo a extremo." }
+                ]
+            },
+            site: {
+                title: "Ecosistema Web Pro",
+                intro: "Una presencia digital completa y autoritativa. Ideal para empresas que necesitan múltiples secciones, blogs informativos o paneles de administración para gestionar contenido dinámico sin depender de un programador.",
+                pBRL: " Desde R$ 2.800", 
+                pMXN: " Desde $9,500 MXN",
+                steps: [
+                    { t: "🔍 SEO Semántico", d: "Estructura de datos avanzada (Schema.org) para dominar los primeros resultados de búsqueda." },
+                    { t: "⚙️ Gestión Total", d: "Panel administrativo (CMS) intuitivo para actualizar textos e imágenes de forma autónoma." },
+                    { t: "🛡️ Bunker Digital", d: "Certificados SSL, protección contra ataques DDoS y copias de seguridad automáticas." }
+                ]
+            }
+        };
+
+        function openPriceModal(plan) {
+            const data = details[plan];
+            // O segredo está na linha abaixo (data.intro)
+            document.getElementById('modal-content').innerHTML = `
+                <span class="text-cyan-400 font-mono text-xs uppercase tracking-widest">Professional Tier</span>
+                <h2 class="text-4xl font-black text-white mt-4 mb-2 uppercase">${data.title}</h2>
+                
+                <p class="text-gray-300 text-sm mb-6 leading-relaxed italic border-l-2 border-cyan-500 pl-4">
+                    ${data.intro}
+                </p>
+
+                <div class="flex flex-col gap-2 mb-10 pb-10 border-b border-white/5">
+                    <div class="flex items-center gap-4">
+                        <span class="text-2xl font-bold text-white">${data.pBRL}</span>
+                        <span class="text-gray-500 text-sm">/ inversión (BRL)</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="text-xl font-bold text-cyan-400/80">${data.pMXN}</span>
+                        <span class="text-gray-500 text-[10px]">/ inversión (MXN)</span>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    ${data.steps.map(s => `
+                        <div class="group">
+                            <h4 class="text-white font-bold flex items-center gap-3 text-sm uppercase">
+                                <span class="w-1.5 h-1.5 bg-cyan-500 rounded-full"></span> ${s.t}
+                            </h4>
+                            <p class="text-gray-400 text-xs mt-2 pl-4 border-l border-white/10 leading-relaxed">${s.d}</p>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+            const modal = document.getElementById('price-modal');
+            modal.classList.remove('hidden');
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePriceModal() {
+            const modal = document.getElementById('price-modal');
+            modal.style.display = 'none';
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+    </script>
+
+
+
+
+
+           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             <section id="contact" class="py-20 px-4 relative">
                 <div class="container mx-auto max-w-4xl" data-aos="fade-up">
