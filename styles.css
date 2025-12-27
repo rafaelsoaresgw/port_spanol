@@ -93,3 +93,76 @@ body.backdrop-blur-overlay::before {
     z-index: 40; /* Deve ser menor que o z-index do sidebar (z-50) */
     transition: background-color 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Animación del Modal */
+#price-modal:not(.hidden) {
+    display: flex !important; /* Asegura que se vea al activar */
+    animation: modalFadeIn 0.4s ease-out;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+
+
+
+/* Animación al pasar el mouse por los planes */
+.group {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.group:hover {
+    transform: translateY(-8px); /* Sube un poco el card */
+    border-color: rgba(6, 182, 212, 0.5); /* Ilumina el borde */
+}
+
+/* Efecto de Brillo en los Botones */
+.group:hover .group-hover\:bg-cyan-500 {
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.6);
+}
+
+
+
+
+/* Card Central Resaltado */
+.scale-105 {
+    transform: scale(1.05); /* 5% más grande */
+    box-shadow: 0 25px 50px -12px rgba(6, 182, 212, 0.4); /* Sombra de color Cian */
+    z-index: 10;
+}
+
+/* Badge de Top Tier dentro del card */
+.bg-white\/20 {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+}
+
+
+
+
+/* Efecto de Vidrio para los Cards de Planes */
+.backdrop-blur-md {
+    background: rgba(255, 255, 255, 0.03); /* Fondo muy suave */
+    backdrop-filter: blur(12px); /* Desfoque del fondo */
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Borde fino para brillo */
+}
