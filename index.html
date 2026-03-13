@@ -4,19 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RSO DIGITAL - Desarrollo Web Creativo y Profesional</title>
-    <meta name="description" content="Creando experiencias web más allá de la imaginación. Desarrollo web creativo y profesional con las mejores tecnologías." data-react-helmet="true">
+    <meta name="description" content="Creando experiencias web más allá de la imaginación. Desarrollo web creativo y profesional con las mejores tecnologías.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="RSO DIGITAL">
+    <meta name="keywords" content="desarrollo web, desarrollo web profesional, diseño web, diseñador web, creación de sitios web, landing page profesional, desarrollo frontend, UI UX design, web developer portfolio">
 
+    <!-- Open Graph (Facebook / LinkedIn) -->
+    <meta property="og:title" content="RSO DIGITAL - Desarrollo Web Creativo y Profesional">
+    <meta property="og:description" content="Desarrollo web moderno, landing pages de alto rendimiento y experiencias digitales diseñadas para convertir visitantes en clientes.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rafaelsoaresgw.github.io/port_spanol/">
+    <meta property="og:image" content="https://rafaelsoaresgw.github.io/port_spanol/img/rso-digital-preview-redes-sociales.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="RSO DIGITAL - Desarrollo Web Creativo">
+    <meta name="twitter:description" content="Sitios web modernos, optimizados para SEO y rendimiento.">
+    <meta name="twitter:image" content="https://rafaelsoaresgw.github.io/port_spanol/img/rso-digital-preview-redes-sociales.png">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://rafaelsoaresgw.github.io/port_spanol/">
+
+    <!-- Preconnect para performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Search Console - INSIRA SUA META TAG AQUI -->
+    <!-- <meta name="google-site-verification" content="SEU_CODIGO_AQUI"> -->
+
+    <!-- Google Analytics - INSIRA SEU CÓDIGO AQUI -->
+    <!-- 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXX');
+    </script>
+    -->
+
+    <!-- Structured Data SEO (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "RSO DIGITAL",
+      "url": "https://rafaelsoaresgw.github.io/port_spanol/",
+      "jobTitle": "Web Developer",
+      "sameAs": [
+        "https://github.com/rafaelsoaresgw"
+      ],
+      "knowsAbout": [
+        "Web Development",
+        "Frontend Development",
+        "UI UX Design",
+        "Landing Pages",
+        "SEO Optimization"
+      ]
+    }
+    </script>
+
+    <!-- Tailwind CSS (CDN temporal, funciona de inmediato) -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+
+    <!-- Estilos personalizados -->
     <link rel="stylesheet" href="styles.css">
-    
+
+    <!-- AOS CSS (cargado con preload) -->
+    <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"></noscript>
 </head>
 <body>
     <div id="root">
         <div class="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-purple-950 text-white overflow-x-hidden">
             
+            <!-- Header -->
             <header class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-cyan-500/20">
                 <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
                     <div class="flex items-center gap-2 cursor-pointer">
@@ -31,31 +93,32 @@
                         <a href="#services" class="hover:text-cyan-400 transition-colors nav-link">SERVICIOS</a>
                         <a href="#pricing" class="text-cyan-400 nav-link font-bold">PRECIOS</a>
                         <a href="#contact" class="hover:text-cyan-400 transition-colors nav-link">SOBRE MÍ</a>
-                        <a href="#contact" class="inline-flex items-center justify-center text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary hover:bg-primary/90 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-2 rounded-full font-semibold nav-link">CONTRÁTAME</a>
+                        <a href="#contact" class="inline-flex items-center justify-center text-sm bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-2 rounded-full font-semibold nav-link">CONTRÁTAME</a>
                     </div>
                     <button id="menu-toggle" class="md:hidden text-cyan-400">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
                     </button>
                 </nav>
             </header>
 
+            <!-- Sidebar móvil -->
             <aside id="sidebar" class="fixed top-0 right-0 h-full w-64 bg-slate-900/90 backdrop-blur-xl border-l border-cyan-500/20 z-50 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
                 <div class="p-4 flex items-center justify-end border-b border-cyan-500/20">
                     <button id="close-menu" class="text-cyan-400 hover:text-white transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
                     </button>
                 </div>
                 <nav class="flex flex-col p-4 gap-4 h-full">
                     <a href="#hero" class="text-white text-lg font-semibold hover:text-cyan-400 transition-colors block py-2 nav-link-sidebar">INICIO</a>
                     <a href="#portfolio" class="text-white text-lg font-semibold hover:text-cyan-400 transition-colors block py-2 nav-link-sidebar">PORTAFOLIO</a>
                     <a href="#services" class="text-white text-lg font-semibold hover:text-cyan-400 transition-colors block py-2 nav-link-sidebar">SERVICIOS</a>
-                    <a href="#pricing" class="text-cyan-400 nav-link font-bold">PRECIOS</a>
+                    <a href="#pricing" class="text-cyan-400 font-bold">PRECIOS</a>
                     <a href="#contact" class="text-white text-lg font-semibold hover:text-cyan-400 transition-colors block py-2 nav-link-sidebar">SOBRE MÍ</a>
-                    <a href="#contact" class="inline-flex items-center justify-center ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary hover:bg-primary/90 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-2 rounded-full font-semibold mt-auto nav-link-sidebar">CONTRÁTAME</a>
+                    <a href="#contact" class="inline-flex items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-2 rounded-full font-semibold mt-auto nav-link-sidebar">CONTRÁTAME</a>
                 </nav>
             </aside>
 
-
+            <!-- Hero -->
             <section id="hero" class="min-h-screen flex items-center justify-center pt-20 px-4 relative overflow-hidden">
                 <div class="absolute inset-0 opacity-30">
                     <div class="absolute top-20 left-10 w-72 h-72 bg-cyan-500 rounded-full filter blur-3xl animate-pulse"></div>
@@ -66,7 +129,7 @@
                         <h1 class="text-5xl md:text-6xl font-bold leading-tight">Creando Experiencias Web <span class="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Más Allá de la Imaginación</span></h1>
                         <p class="text-xl text-gray-300">Desarrollo Web Creativo &amp; Profesional</p>
                         <div>
-                            <a href="https://wa.link/z9ui14" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary hover:bg-primary/90 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-6 rounded-full text-lg font-semibold shadow-lg shadow-cyan-500/50 hover:shadow-cyan-500/70 transition-all">CREEMOS JUNTOS</a>
+                            <a href="https://wa.link/z9ui14" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-6 rounded-full text-lg font-semibold shadow-lg shadow-cyan-500/50 hover:shadow-cyan-500/70 transition-all">CREEMOS JUNTOS</a>
                         </div>
                     </div>
                     <div class="relative">
@@ -79,12 +142,9 @@
                                     <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
                                     <div class="w-3 h-3 rounded-full bg-green-500"></div>
                                 </div>
-                                
                                 <div class="min-w-[300px] min-h-[140px] md:min-w-[400px]">
-                                    <div class="font-mono text-sm" id="typed-code-container">
-                                        </div>
+                                    <div class="font-mono text-sm" id="typed-code-container"></div>
                                 </div>
-                                
                                 <div class="mt-6 flex justify-center">
                                     <div class="w-32 h-32 rounded-full bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 animate-spin-slow flex items-center justify-center">
                                         <div class="w-28 h-28 rounded-full bg-slate-900 flex items-center justify-center">
@@ -98,6 +158,7 @@
                 </div>
             </section>
 
+            <!-- Portfolio con imágenes WebP + fallback PNG -->
             <section id="portfolio" class="py-20 px-4 relative">
                 <div class="container mx-auto">
                     <div class="mb-12" data-aos="fade-up">
@@ -105,16 +166,18 @@
                         <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-600"></div>
                     </div>
                     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- E-commerce -->
                         <a href="https://chic-tartufo-144c54.netlify.app/" target="_blank" rel="noopener noreferrer" class="group relative bg-gradient-to-br from-slate-900/50 to-slate-800/50 rounded-2xl overflow-hidden border border-cyan-500/20 hover:border-cyan-500/50 transition-all cursor-pointer block" data-aos="fade-up" data-aos-delay="100">
-                            
                             <div class="h-48 relative overflow-hidden">
-                                <img src="img/unnamed.png" alt="E-COMMERCE MODERNO - Panda Doces Design" class="w-full h-full object-cover transition-transform group-hover:scale-105">
+                                <picture>
+                                    <source srcset="img/ecommerce-panda-doces.webp" type="image/webp">
+                                    <img src="img/ecommerce-panda-doces.png" alt="E-commerce moderno Panda Doces - tienda online responsiva" class="w-full h-full object-cover transition-transform group-hover:scale-105" loading="lazy">
+                                </picture>
                                 <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all"></div>
                                 <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
                                 </div>
                             </div>
-                            
                             <div class="p-6">
                                 <h3 class="text-xl font-bold mb-2 group-hover:text-cyan-400 transition-colors">E-COMMERCE MODERNO</h3>
                                 <p class="text-gray-400 text-sm">Plataforma de ventas en línea con diseño responsivo</p>
@@ -123,17 +186,19 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-cyan-400"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
                             </div>
                         </a>
-                        
+
+                        <!-- Site Interativo Jardim -->
                         <a href="https://rafaelsoaresgw.github.io/jardim/" target="_blank" rel="noopener noreferrer" class="group relative bg-gradient-to-br from-slate-900/50 to-slate-800/50 rounded-2xl overflow-hidden border border-cyan-500/20 hover:border-cyan-500/50 transition-all cursor-pointer block" data-aos="fade-up" data-aos-delay="200">
-                            
                             <div class="h-48 relative overflow-hidden">
-                                <img src="img/Captura de tela 2025-11-14 193343.png" alt="MÁS INTERACTIVO - Preview do Site Jardim" class="w-full h-full object-cover transition-transform group-hover:scale-105">
+                                <picture>
+                                    <source srcset="img/site-interativo-jardim-preview.webp" type="image/webp">
+                                    <img src="img/site-interativo-jardim-preview.png" alt="Site interativo Jardim - experiências visuais memoráveis" class="w-full h-full object-cover transition-transform group-hover:scale-105" loading="lazy">
+                                </picture>
                                 <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all"></div>
                                 <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
                                 </div>
                             </div>
-                            
                             <div class="p-6">
                                 <h3 class="text-xl font-bold mb-2 group-hover:text-cyan-400 transition-colors">MÁS INTERACTIVO</h3>
                                 <p class="text-gray-400 text-sm">Experiencias visuales memorables y funcionales</p>
@@ -142,17 +207,19 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-cyan-400"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
                             </div>
                         </a>
-                        
+
+                        <!-- Plataforma SaaS Mexican Coffee -->
                         <a href="https://rafaelsoaresgw.github.io/Mexican-Coffe/" target="_blank" rel="noopener noreferrer" class="group relative bg-gradient-to-br from-slate-900/50 to-slate-800/50 rounded-2xl overflow-hidden border border-cyan-500/20 hover:border-cyan-500/50 transition-all cursor-pointer block" data-aos="fade-up" data-aos-delay="300">
-                            
                             <div class="h-48 relative overflow-hidden">
-                                <img src="img/mexican.png" alt="PLATAFORMA SaaS - Mexican Coffee Preview" class="w-full h-full object-cover transition-transform group-hover:scale-105">
+                                <picture>
+                                    <source srcset="img/plataforma-saas-mexican-coffee.webp" type="image/webp">
+                                    <img src="img/plataforma-saas-mexican-coffee.png" alt="Plataforma SaaS Mexican Coffee - sistema de gestión empresarial" class="w-full h-full object-cover transition-transform group-hover:scale-105" loading="lazy">
+                                </picture>
                                 <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all"></div>
                                 <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
                                 </div>
                             </div>
-                            
                             <div class="p-6">
                                 <h3 class="text-xl font-bold mb-2 group-hover:text-cyan-400 transition-colors">PLATAFORMA SaaS</h3>
                                 <p class="text-gray-400 text-sm">Sistema completo de gestión empresarial</p>
@@ -161,18 +228,19 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-cyan-400"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
                             </div>
                         </a>
-                        
+
+                        <!-- Portfólio Artístico -->
                         <a href="https://rafaelsoaresgw.github.io/potfolio_1/" target="_blank" rel="noopener noreferrer" class="group relative bg-gradient-to-br from-slate-900/50 to-slate-800/50 rounded-2xl overflow-hidden border border-cyan-500/20 hover:border-cyan-500/50 transition-all cursor-pointer block" data-aos="fade-up" data-aos-delay="400">
-                            
                             <div class="h-48 relative overflow-hidden">
-                                <img src="img/port.png" alt="PORTAFOLIO ARTÍSTICO - Preview" class="w-full h-full object-cover transition-transform group-hover:scale-105">
-                                
+                                <picture>
+                                    <source srcset="img/portfolio-artistico-desenvolvedor.webp" type="image/webp">
+                                    <img src="img/portfolio-artistico-desenvolvedor.png" alt="Portfólio artístico de desenvolvedor - showcase criativo" class="w-full h-full object-cover transition-transform group-hover:scale-105" loading="lazy">
+                                </picture>
                                 <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all"></div>
                                 <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
                                 </div>
                             </div>
-                            
                             <div class="p-6">
                                 <h3 class="text-xl font-bold mb-2 group-hover:text-cyan-400 transition-colors">PORTAFOLIO ARTÍSTICO</h3>
                                 <p class="text-gray-400 text-sm">Showcase creativo para artistas digitales</p>
@@ -185,43 +253,45 @@
                 </div>
             </section>
 
+            <!-- Servicios -->
             <section id="services" class="py-20 px-4 relative">
                 <div class="container mx-auto">
-                     <div class="mb-12" data-aos="fade-up">
+                    <div class="mb-12" data-aos="fade-up">
                         <h2 class="text-4xl md:text-5xl font-bold mb-4">SERVICIOS</h2>
                         <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-600"></div>
                     </div>
                     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Diseño Web -->
                         <div class="group relative bg-gradient-to-br from-slate-900/50 to-slate-800/50 rounded-2xl p-6 border border-cyan-500/20 hover:border-cyan-500/50 transition-all" data-aos="fade-right">
                             <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="m18 16 4-4-4-4"></path><path d="m6 8-4 4 4 4"></path><path d="m14.5 4-5 16"></path></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
                             </div>
                             <h3 class="text-xl font-bold mb-3 group-hover:text-cyan-400 transition-colors">DISEÑO WEB</h3>
                             <p class="text-gray-400 text-sm leading-relaxed">Interfaces modernas e intuitivas que encantan a los usuarios</p>
                             <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left rounded-b-2xl"></div>
                         </div>
-                        
+                        <!-- Diseño UI/UX -->
                         <div class="group relative bg-gradient-to-br from-slate-900/50 to-slate-800/50 rounded-2xl p-6 border border-cyan-500/20 hover:border-cyan-500/50 transition-all" data-aos="fade-right" data-aos-delay="100">
                             <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><circle cx="13.5" cy="6.5" r=".5"></circle><circle cx="17.5" cy="10.5" r=".5"></circle><circle cx="8.5" cy="7.5" r=".5"></circle><circle cx="6.5" cy="12.5" r=".5"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
                             </div>
                             <h3 class="text-xl font-bold mb-3 group-hover:text-cyan-400 transition-colors">DISEÑO UI/UX</h3>
                             <p class="text-gray-400 text-sm leading-relaxed">Experiencias visuales memorables y funcionales</p>
                             <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 to-pink-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left rounded-b-2xl"></div>
                         </div>
-                        
+                        <!-- Desarrollo Front-end -->
                         <div class="group relative bg-gradient-to-br from-slate-900/50 to-slate-800/50 rounded-2xl p-6 border border-cyan-500/20 hover:border-cyan-500/50 transition-all" data-aos="fade-left" data-aos-delay="100">
                             <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect><path d="M12 18h.01"></path></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
                             </div>
                             <h3 class="text-xl font-bold mb-3 group-hover:text-cyan-400 transition-colors">DESARROLLO FRONT-END</h3>
                             <p class="text-gray-400 text-sm leading-relaxed">Código limpio y de alto rendimiento con las mejores tecnologías</p>
                             <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-cyan-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left rounded-b-2xl"></div>
                         </div>
-                        
+                        <!-- Optimización -->
                         <div class="group relative bg-gradient-to-br from-slate-900/50 to-slate-800/50 rounded-2xl p-6 border border-cyan-500/20 hover:border-cyan-500/50 transition-all" data-aos="fade-left">
                             <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
                             </div>
                             <h3 class="text-xl font-bold mb-3 group-hover:text-cyan-400 transition-colors">OPTIMIZACIÓN</h3>
                             <p class="text-gray-400 text-sm leading-relaxed">Rendimiento y SEO para resultados excepcionales</p>
@@ -231,37 +301,28 @@
                 </div>
             </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section id="pricing" class="py-32 px-4 relative">
+            <!-- Pricing -->
+            <section id="pricing" class="py-32 px-4 relative">
                 <div class="container mx-auto">
                     <div class="text-center max-w-2xl mx-auto mb-20" data-aos="fade-up">
                         <h2 class="text-4xl md:text-5xl font-black mb-6 uppercase">Inversión y Planes</h2>
                         <p class="text-gray-400">Soluciones modulares diseñadas para escalar junto con tu visión de negocio.</p>
                     </div>
                     <div class="grid md:grid-cols-3 gap-8 items-start">
+                        <!-- Básico -->
                         <div class="bg-white/5 backdrop-blur-md p-10 rounded-[2.5rem] border border-white/10 group" data-aos="fade-up">
                             <h3 class="text-gray-400 font-bold text-sm tracking-widest mb-2 uppercase">01. Básico</h3>
                             <div class="text-3xl font-black mb-6 uppercase">Landing Page</div>
                             <button onclick="openPriceModal('lp')" class="w-full py-4 rounded-2xl bg-white/10 group-hover:bg-cyan-500 text-white font-bold transition-all uppercase text-xs tracking-widest">Ver Estructura</button>
                         </div>
+                        <!-- Avanzado (destacado) -->
                         <div class="bg-gradient-to-b from-cyan-600 to-blue-700 p-10 rounded-[2.5rem] shadow-2xl scale-105 relative z-10" data-aos="fade-up" data-aos-delay="100">
                             <div class="absolute top-6 right-8 bg-white/20 px-3 py-1 rounded-full text-[10px] font-bold uppercase text-white">Top Tier</div>
                             <h3 class="text-white/70 font-bold text-sm tracking-widest mb-2 uppercase">02. Avanzado</h3>
                             <div class="text-3xl font-black text-white mb-6 uppercase">App Flutter</div>
                             <button onclick="openPriceModal('app')" class="w-full py-4 rounded-2xl bg-white text-cyan-600 font-bold hover:bg-slate-900 hover:text-white transition-all uppercase text-xs tracking-widest">Ver Estructura</button>
                         </div>
+                        <!-- Business -->
                         <div class="bg-white/5 backdrop-blur-md p-10 rounded-[2.5rem] border border-white/10 group" data-aos="fade-up" data-aos-delay="200">
                             <h3 class="text-gray-400 font-bold text-sm tracking-widest mb-2 uppercase">03. Business</h3>
                             <div class="text-3xl font-black mb-6 uppercase">Sitio Web</div>
@@ -271,150 +332,16 @@
                 </div>
             </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div id="price-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
-        <div class="absolute inset-0 bg-slate-950/90 backdrop-blur-2xl" onclick="closePriceModal()"></div>
-        <div class="bg-slate-900 border border-white/10 w-full max-w-2xl p-10 rounded-[3rem] relative z-10 max-h-[90vh] overflow-y-auto">
-            <div id="modal-content"></div>
-            <button onclick="closePriceModal()" class="mt-12 w-full py-4 text-gray-500 hover:text-white border-t border-white/5 text-[10px] font-bold uppercase tracking-[0.4em]">Cerrar Detalle</button>
-        </div>
-    </div>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ duration: 1000, once: true });
-
-        const details = {
-            lp: {
-                title: "Landing Page Elite",
-                intro: "Diseñada específicamente para maximizar el retorno de inversión (ROI). Esta solución de una sola página utiliza gatillos mentales y una jerarquía visual estratégica para convertir visitantes curiosos en clientes potenciales de forma inmediata.",
-                pBRL: "Desde R$ 1.200", 
-                pMXN: "Desde $4,100 MXN",
-                steps: [
-                    { t: "⚡ Core Web Vitals", d: "Optimización profunda de velocidad para carga instantánea, mejorando el ranking en Google." },
-                    { t: "🎯 Neuromarketing", d: "Arquitectura persuasiva basada en el comportamiento del usuario para aumentar las ventas." },
-                    { t: "📊 Tracking API", d: "Configuración avanzada de Pixel de Meta y Google Tag Manager para medir cada clic." }
-                ]
-            },
-            app: {
-                title: "App Flutter Native",
-                intro: "Desarrollo de aplicaciones móviles con rendimiento nativo. Una sola base de código para iOS y Android que ofrece una experiencia de usuario fluida, ideal para startups que buscan escalabilidad y robustez tecnológica.",
-                pBRL: "Desde R$ 5.500", 
-                pMXN: "Desde $18,500 MXN",
-                steps: [
-                    { t: "💎 UI/UX Premium", d: "Interfaces intuitivas con animaciones fluidas a 60 FPS para una experiencia inmersiva." },
-                    { t: "🔥 Firebase Backend", d: "Base de datos en tiempo real, autenticación segura y notificaciones push personalizadas." },
-                    { t: "🛡️ Seguridad Robusta", d: "Implementación de protocolos OAuth 2.0 y encriptación de datos de extremo a extremo." }
-                ]
-            },
-            site: {
-                title: "Ecosistema Web Pro",
-                intro: "Una presencia digital completa y autoritativa. Ideal para empresas que necesitan múltiples secciones, blogs informativos o paneles de administración para gestionar contenido dinámico sin depender de un programador.",
-                pBRL: " Desde R$ 2.800", 
-                pMXN: " Desde $9,500 MXN",
-                steps: [
-                    { t: "🔍 SEO Semántico", d: "Estructura de datos avanzada (Schema.org) para dominar los primeros resultados de búsqueda." },
-                    { t: "⚙️ Gestión Total", d: "Panel administrativo (CMS) intuitivo para actualizar textos e imágenes de forma autónoma." },
-                    { t: "🛡️ Bunker Digital", d: "Certificados SSL, protección contra ataques DDoS y copias de seguridad automáticas." }
-                ]
-            }
-        };
-
-        function openPriceModal(plan) {
-            const data = details[plan];
-            // O segredo está na linha abaixo (data.intro)
-            document.getElementById('modal-content').innerHTML = `
-                <span class="text-cyan-400 font-mono text-xs uppercase tracking-widest">Professional Tier</span>
-                <h2 class="text-4xl font-black text-white mt-4 mb-2 uppercase">${data.title}</h2>
-                
-                <p class="text-gray-300 text-sm mb-6 leading-relaxed italic border-l-2 border-cyan-500 pl-4">
-                    ${data.intro}
-                </p>
-
-                <div class="flex flex-col gap-2 mb-10 pb-10 border-b border-white/5">
-                    <div class="flex items-center gap-4">
-                        <span class="text-2xl font-bold text-white">${data.pBRL}</span>
-                        <span class="text-gray-500 text-sm">/ inversión (BRL)</span>
-                    </div>
-                    <div class="flex items-center gap-4">
-                        <span class="text-xl font-bold text-cyan-400/80">${data.pMXN}</span>
-                        <span class="text-gray-500 text-[10px]">/ inversión (MXN)</span>
-                    </div>
+            <!-- Modal de preços -->
+            <div id="price-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+                <div class="absolute inset-0 bg-slate-950/90 backdrop-blur-2xl" onclick="closePriceModal()"></div>
+                <div class="bg-slate-900 border border-white/10 w-full max-w-2xl p-10 rounded-[3rem] relative z-10 max-h-[90vh] overflow-y-auto">
+                    <div id="modal-content"></div>
+                    <button onclick="closePriceModal()" class="mt-12 w-full py-4 text-gray-500 hover:text-white border-t border-white/5 text-[10px] font-bold uppercase tracking-[0.4em]">Cerrar Detalle</button>
                 </div>
-                <div class="space-y-6">
-                    ${data.steps.map(s => `
-                        <div class="group">
-                            <h4 class="text-white font-bold flex items-center gap-3 text-sm uppercase">
-                                <span class="w-1.5 h-1.5 bg-cyan-500 rounded-full"></span> ${s.t}
-                            </h4>
-                            <p class="text-gray-400 text-xs mt-2 pl-4 border-l border-white/10 leading-relaxed">${s.d}</p>
-                        </div>
-                    `).join('')}
-                </div>
-            `;
-            const modal = document.getElementById('price-modal');
-            modal.classList.remove('hidden');
-            modal.style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-        }
+            </div>
 
-        function closePriceModal() {
-            const modal = document.getElementById('price-modal');
-            modal.style.display = 'none';
-            modal.classList.add('hidden');
-            document.body.style.overflow = 'auto';
-        }
-    </script>
-
-
-
-
-
-           
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            <!-- Contacto -->
             <section id="contact" class="py-20 px-4 relative">
                 <div class="container mx-auto max-w-4xl" data-aos="fade-up">
                     <div class="mb-12 text-center">
@@ -432,20 +359,20 @@
                             <div class="grid md:grid-cols-2 gap-6">
                                 <div class="space-y-2">
                                     <label class="text-sm font-semibold text-cyan-400">NOMBRE</label>
-                                    <input type="text" class="flex h-12 w-full rounded-lg border px-4 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all bg-slate-900/50 border-cyan-500/30 focus:border-cyan-500 text-white placeholder:text-gray-500" name="name" required="" placeholder="Tu nombre" value="">
+                                    <input type="text" class="flex h-12 w-full rounded-lg border px-4 py-2 text-sm bg-slate-900/50 border-cyan-500/30 focus:border-cyan-500 text-white placeholder:text-gray-500" name="name" required placeholder="Tu nombre">
                                 </div>
                                 <div class="space-y-2">
                                     <label class="text-sm font-semibold text-cyan-400">CORREO ELECTRÓNICO</label>
-                                    <input type="email" class="flex h-12 w-full rounded-lg border px-4 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all bg-slate-900/50 border-cyan-500/30 focus:border-cyan-500 text-white placeholder:text-gray-500" name="email" required="" placeholder="tu@correo.com" value="">
+                                    <input type="email" class="flex h-12 w-full rounded-lg border px-4 py-2 text-sm bg-slate-900/50 border-cyan-500/30 focus:border-cyan-500 text-white placeholder:text-gray-500" name="email" required placeholder="tu@correo.com">
                                 </div>
                             </div>
                             <div class="space-y-2">
                                 <label class="text-sm font-semibold text-cyan-400">MENSAJE</label>
-                                <textarea class="flex min-h-[80px] w-full rounded-lg border px-4 py-3 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all bg-slate-900/50 border-cyan-500/30 focus:border-cyan-500 text-white placeholder:text-gray-500 resize-none" name="message" required="" rows="6" placeholder="Cuéntame sobre tu proyecto..."></textarea>
+                                <textarea class="flex min-h-[80px] w-full rounded-lg border px-4 py-3 text-sm bg-slate-900/50 border-cyan-500/30 focus:border-cyan-500 text-white placeholder:text-gray-500 resize-none" name="message" required rows="6" placeholder="Cuéntame sobre tu proyecto..."></textarea>
                             </div>
-                            <button class="inline-flex items-center justify-center ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary hover:bg-primary/90 h-10 px-4 w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white py-6 rounded-full text-lg font-semibold shadow-lg shadow-cyan-500/50 hover:shadow-cyan-500/70 transition-all group" type="submit">
+                            <button class="inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white py-6 rounded-full text-lg font-semibold shadow-lg shadow-cyan-500/50 hover:shadow-cyan-500/70 transition-all group" type="submit">
                                 <span class="flex items-center justify-center gap-2">ENVIAR MENSAJE
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send group-hover:translate-x-1 transition-transform"><path d="m22 2-7 20-4-9-9-4Z"></path><path d="M22 2 11 13"></path></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
                                 </span>
                             </button>
                         </form>
@@ -459,19 +386,17 @@
         </div>
     </div>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Scripts (defer para no bloquear) -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
     <script>
-        AOS.init({
-            duration: 1000, 
-            once: true,    
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({ duration: 1000, once: true });
         });
     </script>
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            // ----------------------------------------------------
-            // 1. Control del Menú Lateral (Sidebar)
-            // ----------------------------------------------------
+            // Sidebar
             const menuToggle = document.getElementById('menu-toggle');
             const closeMenu = document.getElementById('close-menu');
             const sidebar = document.getElementById('sidebar');
@@ -490,67 +415,45 @@
             menuToggle.addEventListener('click', openSidebar);
             closeMenu.addEventListener('click', closeSidebar);
 
-            // Corrige el blur persistente cuando la pantalla es redimensionada para desktop
             window.addEventListener('resize', () => {
-                // 768px es el breakpoint 'md' del Tailwind CSS
-                if (window.innerWidth >= 768) { 
+                if (window.innerWidth >= 768) {
                     if (!sidebar.classList.contains('translate-x-full')) {
                         closeSidebar();
                     }
                 }
             });
 
-            // ----------------------------------------------------
-            // 2. Desplazamiento Suave para Enlaces de Navegación (Menú Principal y Lateral)
-            // ----------------------------------------------------
+            // Smooth scroll
             const smoothScrollLinks = document.querySelectorAll('.nav-link[href^="#"], .nav-link-sidebar[href^="#"]');
-            
             smoothScrollLinks.forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
-                    
                     const targetId = anchor.getAttribute('href');
                     const targetElement = document.querySelector(targetId);
-                    
-                    // Si es un enlace del sidebar, ciérralo
                     if (anchor.classList.contains('nav-link-sidebar')) {
                         closeSidebar();
                     }
-
                     if (targetElement) {
-                        const headerHeight = 72; 
+                        const headerHeight = 72;
                         const targetPosition = targetElement.offsetTop - headerHeight;
-
-                        window.scrollTo({
-                            top: targetPosition,
-                            behavior: 'smooth'
-                        });
+                        window.scrollTo({ top: targetPosition, behavior: 'smooth' });
                     }
                 });
             });
 
-
-            // ----------------------------------------------------
-            // 3. Alerta de Éxito
-            // ----------------------------------------------------
+            // Alerta de éxito
             const urlParams = new URLSearchParams(window.location.search);
-            const successParam = urlParams.get('success');
-
-            if (successParam === 'true') {
+            if (urlParams.get('success') === 'true') {
                 alert("Mensaje enviado con éxito! Pronto me pondré en contacto contigo.");
                 history.replaceState(null, null, window.location.pathname);
             }
 
-            // ----------------------------------------------------
-            // 4. Efecto de Escritura (Typing Effect)
-            // ----------------------------------------------------
+            // Typing effect
             const codeContainer = document.getElementById('typed-code-container');
-            
-            // Definición del código con etiquetas de color y sangría
             const codeLines = [
                 ['text-cyan-400', 'const '],
                 ['text-white', 'developer'],
-                ['text-cyan-400', ' = {', 0, true], 
+                ['text-cyan-400', ' = {', 0, true],
                 ['text-purple-400', 'name: ', 4],
                 ['text-green-400', "'CodeForge'"],
                 ['text-purple-400', ',', 0, true],
@@ -559,52 +462,104 @@
                 ['text-purple-400', ',', 0, true],
                 ['text-purple-400', 'passion: ', 4],
                 ['text-green-400', "'Creating Amazing Web'"],
-                ['text-purple-400', '', 0, true], 
-                ['text-cyan-400', '}', 0, false] 
+                ['text-purple-400', '', 0, true],
+                ['text-cyan-400', '}', 0, false]
             ];
-
-            let lineIndex = 0;
-            let charIndex = 0;
-            let currentSpan = null;
-            const typingSpeed = 50; 
-            const lineBreakDelay = 8; 
+            let lineIndex = 0, charIndex = 0, currentSpan = null;
+            const typingSpeed = 50, lineBreakDelay = 8;
 
             function typeCode() {
                 if (lineIndex < codeLines.length) {
                     const [cssClass, fullText, indent, addNewLine] = codeLines[lineIndex];
-
                     if (charIndex === 0) {
-                        if (indent > 0) {
-                            codeContainer.insertAdjacentHTML('beforeend', '&nbsp;'.repeat(indent));
-                        }
-                        
+                        if (indent > 0) codeContainer.insertAdjacentHTML('beforeend', '&nbsp;'.repeat(indent));
                         currentSpan = document.createElement('span');
                         currentSpan.className = cssClass;
                         codeContainer.appendChild(currentSpan);
                     }
-
                     if (charIndex < fullText.length) {
                         currentSpan.textContent += fullText.charAt(charIndex);
                         charIndex++;
                         setTimeout(typeCode, typingSpeed);
                     } else {
                         charIndex = 0;
-                        if (addNewLine) {
-                            codeContainer.appendChild(document.createElement('br'));
-                        }
+                        if (addNewLine) codeContainer.appendChild(document.createElement('br'));
                         lineIndex++;
-                        setTimeout(typeCode, typingSpeed * lineBreakDelay); 
+                        setTimeout(typeCode, typingSpeed * lineBreakDelay);
                     }
                 } else {
-                    const finalCursor = document.createElement('span');
-                    finalCursor.textContent = '|'; 
-                    finalCursor.className = 'blinking-cursor'; 
-                    codeContainer.appendChild(finalCursor);
+                    const cursor = document.createElement('span');
+                    cursor.textContent = '|';
+                    cursor.className = 'blinking-cursor';
+                    codeContainer.appendChild(cursor);
                 }
             }
-
-            setTimeout(typeCode, 1500); 
+            setTimeout(typeCode, 1500);
         });
+    </script>
+
+    <script>
+        // Modal de precios
+        const details = {
+            lp: {
+                title: "Landing Page Elite",
+                intro: "Diseñada específicamente para maximizar el retorno de inversión (ROI). Esta solución de una sola página utiliza gatillos mentales y una jerarquía visual estratégica para convertir visitantes curiosos en clientes potenciales de forma inmediata.",
+                pBRL: "Desde R$ 1.200",
+                pMXN: "Desde $4,100 MXN",
+                steps: [
+                    { t: "⚡ Core Web Vitals", d: "Optimización profunda de velocidad para carga instantánea, mejorando el ranking en Google." },
+                    { t: "🎯 Neuromarketing", d: "Arquitectura persuasiva basada en el comportamiento del usuario para aumentar las ventas." },
+                    { t: "📊 Tracking API", d: "Configuración avanzada de Pixel de Meta y Google Tag Manager para medir cada clic." }
+                ]
+            },
+            app: {
+                title: "App Flutter Native",
+                intro: "Desarrollo de aplicaciones móviles con rendimiento nativo. Una sola base de código para iOS y Android que ofrece una experiencia de usuario fluida, ideal para startups que buscan escalabilidad y robustez tecnológica.",
+                pBRL: "Desde R$ 5.500",
+                pMXN: "Desde $18,500 MXN",
+                steps: [
+                    { t: "💎 UI/UX Premium", d: "Interfaces intuitivas con animaciones fluidas a 60 FPS para una experiencia inmersiva." },
+                    { t: "🔥 Firebase Backend", d: "Base de datos en tiempo real, autenticación segura y notificaciones push personalizadas." },
+                    { t: "🛡️ Seguridad Robusta", d: "Implementación de protocolos OAuth 2.0 y encriptación de datos de extremo a extremo." }
+                ]
+            },
+            site: {
+                title: "Ecosistema Web Pro",
+                intro: "Una presencia digital completa y autoritativa. Ideal para empresas que necesitan múltiples secciones, blogs informativos o paneles de administración para gestionar contenido dinámico sin depender de un programador.",
+                pBRL: "Desde R$ 2.800",
+                pMXN: "Desde $9,500 MXN",
+                steps: [
+                    { t: "🔍 SEO Semántico", d: "Estructura de datos avanzada (Schema.org) para dominar los primeros resultados de búsqueda." },
+                    { t: "⚙️ Gestión Total", d: "Panel administrativo (CMS) intuitivo para actualizar textos e imágenes de forma autónoma." },
+                    { t: "🛡️ Bunker Digital", d: "Certificados SSL, protección contra ataques DDoS y copias de seguridad automáticas." }
+                ]
+            }
+        };
+
+        function openPriceModal(plan) {
+            const data = details[plan];
+            document.getElementById('modal-content').innerHTML = `
+                <span class="text-cyan-400 font-mono text-xs uppercase tracking-widest">Professional Tier</span>
+                <h2 class="text-4xl font-black text-white mt-4 mb-2 uppercase">${data.title}</h2>
+                <p class="text-gray-300 text-sm mb-6 leading-relaxed italic border-l-2 border-cyan-500 pl-4">${data.intro}</p>
+                <div class="flex flex-col gap-2 mb-10 pb-10 border-b border-white/5">
+                    <div class="flex items-center gap-4"><span class="text-2xl font-bold text-white">${data.pBRL}</span><span class="text-gray-500 text-sm">/ inversión (BRL)</span></div>
+                    <div class="flex items-center gap-4"><span class="text-xl font-bold text-cyan-400/80">${data.pMXN}</span><span class="text-gray-500 text-[10px]">/ inversión (MXN)</span></div>
+                </div>
+                <div class="space-y-6">${data.steps.map(s => `<div><h4 class="text-white font-bold flex items-center gap-3 text-sm uppercase"><span class="w-1.5 h-1.5 bg-cyan-500 rounded-full"></span> ${s.t}</h4><p class="text-gray-400 text-xs mt-2 pl-4 border-l border-white/10 leading-relaxed">${s.d}</p></div>`).join('')}</div>
+            `;
+            const modal = document.getElementById('price-modal');
+            modal.classList.remove('hidden');
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePriceModal() {
+            const modal = document.getElementById('price-modal');
+            modal.style.display = 'none';
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
     </script>
 </body>
 </html>
