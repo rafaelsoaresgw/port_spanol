@@ -1,9 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://rafaelsoaresgw.github.io/port_spanol/</loc>
-    <lastmod>2025-03-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+    <!-- ================================================
+         SITEMAP — RSO DIGITAL
+         Atualizado em: 2026-06-26
+         Domínio: https://rsomarketing.com
+         Cobre: Brasil (pt-BR) e México (es-MX)
+         ================================================ -->
+
+    <!-- PÁGINA PRINCIPAL (pt-BR) -->
+    <url>
+        <loc>https://rsomarketing.com/</loc>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rsomarketing.com/"/>
+        <xhtml:link rel="alternate" hreflang="es-MX" href="https://rsomarketing.com/mx/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rsomarketing.com/"/>
+        <lastmod>2026-06-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- PÁGINA: CRIAÇÃO DE SITES -->
+    <url>
+        <loc>https://rsomarketing.com/criacao-de-sites</loc>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rsomarketing.com/criacao-de-sites"/>
+        <xhtml:link rel="alternate" hreflang="es-MX" href="https://rsomarketing.com/mx/criacao-de-sites"/>
+        <lastmod>2026-06-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- PÁGINA: SEO PARA EMPRESAS -->
+    <url>
+        <loc>https://rsomarketing.com/seo-para-empresas</loc>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rsomarketing.com/seo-para-empresas"/>
+        <xhtml:link rel="alternate" hreflang="es-MX" href="https://rsomarketing.com/mx/seo-para-empresas"/>
+        <lastmod>2026-06-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- PÁGINA: SITE QUE VENDE -->
+    <url>
+        <loc>https://rsomarketing.com/site-que-vende</loc>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rsomarketing.com/site-que-vende"/>
+        <xhtml:link rel="alternate" hreflang="es-MX" href="https://rsomarketing.com/mx/site-que-vende"/>
+        <lastmod>2026-06-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- VERSÃO MEXICO (es-MX) -->
+    <url>
+        <loc>https://rsomarketing.com/mx/</loc>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rsomarketing.com/"/>
+        <xhtml:link rel="alternate" hreflang="es-MX" href="https://rsomarketing.com/mx/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rsomarketing.com/"/>
+        <lastmod>2026-06-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- ÂNCORA: SOLUÇÕES / PREÇOS -->
+    <url>
+        <loc>https://rsomarketing.com/#solucoes</loc>
+        <lastmod>2026-06-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- ÂNCORA: CASES DE ROI -->
+    <url>
+        <loc>https://rsomarketing.com/#cases</loc>
+        <lastmod>2026-06-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- ÂNCORA: A ENGENHARIA / SOBRE -->
+    <url>
+        <loc>https://rsomarketing.com/#engenharia</loc>
+        <lastmod>2026-06-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- POLÍTICA DE PRIVACIDADE -->
+    <url>
+        <loc>https://rsomarketing.com/politica-de-privacidade/</loc>
+        <lastmod>2026-06-26</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
 </urlset>

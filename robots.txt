@@ -1,3 +1,14 @@
+# ================================================
+# robots.txt — RSO DIGITAL
+# https://rsomarketing.com
+# ================================================
+
 User-agent: *
 Allow: /
-Sitemap: https://rafaelsoaresgw.github.io/sitemap.xml
+
+# Bloqueia arquivos de sistema que não devem ser indexados
+Disallow: /assets/09162a18-0c22dd3e.mp4
+Disallow: /*.json$
+
+# Sitemap
+Sitemap: https://rsomarketing.com/sitemap.xml
