@@ -4,12 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-    <title>RSO DIGITAL | Criação de Sites Premium e Engenharia de Conversão</title>
+    <!-- ============================================================
+         GOOGLE ANALYTICS 4 (INSTALADO MANUALMENTE)
+         ID: G-GVPYXNP5EF
+         ============================================================ -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GVPYXNP5EF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GVPYXNP5EF');
+    </script>
+    <!-- ============================================================ -->
 
-    <meta name="description" content="Desenvolvimento web de alto padrão com código limpo, SEO estrutural e design imersivo. Construímos ecossistemas digitais sob medida para marcas exigentes. Solicite seu orçamento pelo WhatsApp.">
+    <title>Criação de Sites que Vendem | SEO e Performance | RSO Digital</title>
+    <meta name="description" content="Crie um site ultrarrápido e otimizado para conversão. Aumente suas vendas com código limpo, SEO técnico avançado e design imersivo. Orçamento grátis pelo WhatsApp.">
 
     <meta name="keywords" content="criação de sites, agência digital, web design premium, SEO avançado, engenharia de conversão, desenvolvimento web sob medida, código limpo, automação com IA, site profissional">
-
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="author" content="RSO Digital">
     <meta name="theme-color" content="#0a0a0a">
@@ -167,157 +179,6 @@
     <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="style.css"></noscript>
 
-    <style>
-        /* Reset e base */
-        * { margin:0; padding:0; box-sizing:border-box; }
-        html { scroll-behavior:smooth; }
-        body {
-            font-family: "Inter", "Neue Plak", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-            background:#000; color:#fff; overflow-x:hidden;
-            -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
-            cursor: none;
-        }
-        /* Preloader */
-        #preloader {
-            position:fixed; inset:0; z-index:10000; background:#0a0b0e;
-            display:flex; align-items:center; justify-content:center;
-            transition:opacity 0.8s ease, visibility 0.8s ease;
-            overflow:hidden;
-        }
-        #preloader::before {
-            content:''; position:absolute; inset:0;
-            background:radial-gradient(circle at 20% 50%, rgba(234,255,0,0.03) 0%, transparent 50%),
-                     radial-gradient(circle at 80% 50%, rgba(234,255,0,0.02) 0%, transparent 50%),
-                     linear-gradient(135deg, #0a0b0e 0%, #14161c 100%);
-            z-index:0;
-        }
-        #preloader.hidden { opacity:0; visibility:hidden; pointer-events:none; }
-        .preloader-inner {
-            position:relative; z-index:1; text-align:center;
-            display:flex; flex-direction:column; align-items:center;
-            gap:1.8rem; max-width:90%;
-        }
-        /* Restante do preloader será carregado com o CSS completo */
-        /* Hero – estilos mínimos para evitar FOUC */
-        .hero {
-            position:relative; width:100%; height:100vh; overflow:hidden; background:#000;
-        }
-        .hero-video {
-            position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:1;
-        }
-        .hero::before {
-            content:""; position:absolute; inset:0;
-            background:linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.65));
-            z-index:2;
-        }
-        .hero-center {
-            position:absolute; inset:0; display:flex; justify-content:center; align-items:center;
-            text-align:center; z-index:10; padding:0 20px; padding-top:70px !important;
-        }
-        @media (max-width:768px) { .hero-center { padding-top:60px !important; } }
-        .reference-hero {
-            width:100%; max-width:1100px; display:flex; flex-direction:column; align-items:center;
-        }
-        .club-kicker {
-            font-size:12px; font-weight:500; letter-spacing:0.28em; text-transform:uppercase;
-            color:#fff; margin-bottom:16px; opacity:0.95;
-        }
-        .hero-title {
-            font-size:clamp(2.5rem, 6vw, 4.8rem); font-weight:600; line-height:1.1;
-            letter-spacing:-0.02em; color:#fff; max-width:18ch; margin:0 auto 24px;
-        }
-        .hero-copy {
-            max-width:70ch; margin:0 auto 32px;
-            font-size:clamp(0.95rem, 1.2vw, 1.15rem); line-height:1.5;
-            font-weight:400; color:rgba(255,255,255,0.9); padding:0 12px;
-        }
-        .shiny-cta {
-            /* estilo mínimo para evitar FOUC, será sobrescrito pelo CSS completo */
-            display:inline-flex; align-items:center; justify-content:center;
-            padding:0.9rem 2rem; border-radius:48px; font-size:1rem; font-weight:600;
-            background:linear-gradient(135deg, #18181c 0%, #0f0f12 100%);
-            border:1px solid rgba(234,255,0,0.3); color:#fff; text-decoration:none;
-            cursor:pointer; backdrop-filter:blur(4px);
-        }
-        /* Navbar */
-        .nav-container {
-            position:fixed; top:0; left:50%; transform:translateX(-50%);
-            width:757px; max-width:90%; height:56px; z-index:1000;
-        }
-        .nav-shape { position:absolute; inset:0; width:100%; height:100%; }
-        .nav-content {
-            position:relative; z-index:2; height:56px; display:flex;
-            align-items:center; padding:0 32px;
-        }
-        .logo {
-            color:#fff; text-decoration:none; font-size:20px; font-weight:900;
-            font-style:italic; margin-right:45px; letter-spacing:-0.02em;
-        }
-        .links { display:flex; align-items:center; gap:28px; flex:1; }
-        .links a { color:#cbcbcb; text-decoration:none; font-size:13px; font-weight:500; transition:color 0.2s; }
-        .links a:hover { color:#fff; }
-        .contact {
-            height:34px; padding:0 20px 0 16px; background:#eceeed; color:#111;
-            text-decoration:none; display:flex; align-items:center; gap:8px;
-            font-size:13px; font-weight:600; clip-path:polygon(0 0, 100% 0, calc(100% - 12px) 100%, 0 100%);
-            transition:background 0.2s;
-        }
-        .contact::before { content:""; width:5px; height:5px; background:#c0c0c0; }
-        .contact:hover { background:#ffffff; }
-        #menu-toggle, .menu-btn { display:none; }
-        /* Outros estilos críticos para evitar FOUC em seções visíveis */
-        .network-section { background:radial-gradient(circle at 78% 50%, #081423 0%, #040811 25%, #010106 55%, #000000 100%); }
-        .grid-layout { display:grid; grid-template-columns:6fr 6fr; gap:2rem; width:100%; align-items:center; }
-        .content-block { position:relative; z-index:10; }
-        .title { font-size:2.5rem; font-weight:500; letter-spacing:-.02em; line-height:1.15; margin-bottom:.75rem; color:#fff; }
-        @media (min-width:1024px) { .title { font-size:3.5rem; } }
-        .description { font-size:1rem; line-height:1.625; color:#9ca3af; max-width:32rem; margin-bottom:1.5rem; }
-        .btn { display:inline-flex; align-items:center; justify-content:center; gap:.5rem; font-family:'JetBrains Mono', monospace; font-size:.75rem; font-weight:500; text-transform:uppercase; letter-spacing:.025em; padding:0 1.5rem; height:2.75rem; border-radius:.125rem; transition:all .2s cubic-bezier(.16,1,.3,1); cursor:pointer; text-decoration:none; white-space:nowrap; }
-        .btn-primary { background-color:#eaff00; color:#000; border:1px solid #eaff00; }
-        .btn-outline { border:1px solid rgba(255,255,255,.08); background:rgba(255,255,255,.02); color:#f9f9fb; }
-        .btn svg { width:.875rem; height:.875rem; stroke-width:2; }
-        .canvas-container { position:absolute; top:0; left:0; width:100%; height:100%; z-index:1; pointer-events:none; }
-        #networkCanvas { position:absolute; inset:0; width:100%; height:100%; opacity:0; transition:opacity 1600ms cubic-bezier(0.16,1,0.3,1); touch-action:none; cursor:grab; pointer-events:auto; }
-        /* Para dispositivos móveis, ajustes mínimos */
-        @media (max-width:1024px) {
-            .grid-layout { grid-template-columns:1fr; text-align:center; gap:1rem; }
-            .description { max-width:100%; }
-            .button-group { justify-content:center; }
-        }
-        @media (max-width:768px) {
-            .nav-container { max-width:95%; }
-            .nav-content { padding:0 24px; display:flex; justify-content:space-between; align-items:center; }
-            .logo { font-size:20px; margin-right:0; z-index:110; margin-left:auto; }
-            .menu-btn { display:flex; flex-direction:column; justify-content:center; gap:4px; width:22px; height:20px; cursor:pointer; z-index:110; order:3; }
-            .menu-btn span { display:block; height:2px; background-color:#fff; transition:all 0.3s; border-radius:2px; }
-            .menu-btn span:nth-child(1) { width:100%; }
-            .menu-btn span:nth-child(2) { width:75%; }
-            .menu-btn span:nth-child(3) { width:50%; }
-            .contact { height:32px; padding:0 14px 0 10px; font-size:11px; z-index:110; margin-left:auto; margin-right:16px; order:2; }
-            .links {
-                display:flex; position:fixed; top:0; left:0; width:100vw; height:100vh;
-                background:rgba(8,8,12,0.92); backdrop-filter:blur(32px) saturate(1.4);
-                -webkit-backdrop-filter:blur(32px) saturate(1.4);
-                flex-direction:column; justify-content:center; align-items:center; gap:2.2rem;
-                transform:translateY(-100%); transition:transform 0.6s cubic-bezier(0.16,1,0.3,1), opacity 0.5s ease;
-                z-index:105; opacity:0; pointer-events:none; padding:2rem;
-                will-change:transform, opacity;
-            }
-            #menu-toggle:checked ~ .links {
-                transform:translateY(0); opacity:1; pointer-events:auto;
-            }
-            .links a {
-                position:relative; z-index:1; font-size:1.8rem; font-weight:500;
-                color:rgba(255,255,255,0.7); text-decoration:none; letter-spacing:0.02em;
-                padding:0.2rem 0; opacity:0; transform:translateY(20px);
-                transition:all 0.4s cubic-bezier(0.16,1,0.3,1);
-            }
-            #menu-toggle:checked ~ .links a:nth-child(1) { transition-delay:0.05s; opacity:1; transform:translateY(0); }
-            #menu-toggle:checked ~ .links a:nth-child(2) { transition-delay:0.12s; opacity:1; transform:translateY(0); }
-            #menu-toggle:checked ~ .links a:nth-child(3) { transition-delay:0.19s; opacity:1; transform:translateY(0); }
-        }
-    </style>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://unpkg.com">
@@ -366,16 +227,19 @@
             <label for="menu-toggle" class="menu-btn">
                 <span></span><span></span><span></span>
             </label>
-            <a href="#" class="logo">RSO DIGITAL</a>
+            <a href="/" class="logo">RSO DIGITAL</a>
             <div class="links">
-                <a href="#solucoes">Projetos</a>
-                <a href="#cases">Atuação</a>
-                <a href="#engenharia">Metodologia</a>
+                <a href="/criacao-de-sites.html">Criação de Sites</a>
+                <a href="/seo-para-empresas.html">SEO</a>
+                <a href="/design-premium.html">Design</a>
+                <a href="/blog/velocidade-site-vende-mais.html">Blog</a>
+                <a href="/contato.html">Contato</a>
             </div>
-            <a href="https://wa.me/5519971683530?text=Ol%C3%A1%21%20Vim%20pelo%20site%20RSO%20Digital%20e%20quero%20falar%20sobre%20meu%20projeto." target="_blank" rel="noopener noreferrer" class="contact">Falar com especialista →</a>
+            <a href="https://wa.me/5519971683530?text=Ol%C3%A1%21%20Vim%20pelo%20site%20RSO%20Digital%20e%20quero%20falar%20sobre%20meu%20projeto." target="_blank" rel="noopener noreferrer" class="contact" onclick="gtag('event', 'whatsapp_click');">Falar com especialista →</a>
         </div>
     </nav>
     </header>
+
     <main id="conteudo-principal" role="main">
     <section class="hero" aria-label="Seção principal — Engenharia de Conversão RSO Digital">
         <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/hero-poster.jpg" aria-hidden="true">
@@ -386,7 +250,7 @@
                 <div class="club-kicker">CÓDIGO LIMPO & DESIGN DE ALTO PADRÃO</div>
                 <h1 class="hero-title">O site que eleva<br>o nível da sua marca</h1>
                 <p class="hero-copy" id="heroCopy">Enquanto você foca no seu negócio, seu site trabalha com velocidade extrema, arquitetura manual (HTML/CSS) e design inspirado nas maiores agências do mundo. Criamos ecossistemas digitais sólidos que posicionam sua empresa como autoridade no seu mercado.</p>
-                <a href="https://wa.me/5519971683530?text=Ol%C3%A1%21%20Quero%20uma%20proposta%20para%20meu%20site.%20Vim%20pelo%20site%20RSO%20Digital." target="_blank" rel="noopener noreferrer" class="shiny-cta shiny-cta-link" aria-label="Solicitar proposta de criação de site pelo WhatsApp">
+                <a href="https://wa.me/5519971683530?text=Ol%C3%A1%21%20Quero%20uma%20proposta%20para%20meu%20site.%20Vim%20pelo%20site%20RSO%20Digital." target="_blank" rel="noopener noreferrer" class="shiny-cta shiny-cta-link" aria-label="Solicitar proposta de criação de site pelo WhatsApp" onclick="gtag('event', 'whatsapp_click');">
                     <span>Quero um orçamento exclusivo</span>
                 </a>
                 <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1rem; font-size: 0.7rem; color: rgba(255,255,255,0.5);">
@@ -437,7 +301,7 @@
                         <div class="card-icon">⌀</div>
                         <h2>O DNA da RSO</h2>
                         <p>Eu não entrego páginas feitas em esteira industrial. Entregamos ativos digitais <strong class="count-number" data-target="100">0</strong>% desenhados e programados de forma dedicada para você. Cada pixel é posicionado para valorizar seu serviço, garantindo uma base sólida para qualquer estratégia futura.</p>
-                        <a href="https://wa.me/5519971683530?text=Ol%C3%A1%21%20Vim%20pelo%20site%20RSO%20Digital%20e%20gostei%20da%20sua%20metodologia." target="_blank" rel="noopener noreferrer" class="arrow-link">↗</a>
+                        <a href="https://wa.me/5519971683530?text=Ol%C3%A1%21%20Vim%20pelo%20site%20RSO%20Digital%20e%20gostei%20da%20sua%20metodologia." target="_blank" rel="noopener noreferrer" class="arrow-link" onclick="gtag('event', 'whatsapp_click');">↗</a>
                     </div>
                 </div>
             </div>
@@ -500,7 +364,7 @@
                     <div class="card-content service-content">
                         <h3>Estrutura focada no Google</h3>
                         <p class="service-description">Todo projeto nasce com SEO técnico implementado de forma nativa na raiz do código. Entregamos a base perfeita para que sua estratégia orgânica tenha os melhores resultados possíveis no longo prazo.</p>
-                        <a href="https://wa.me/5519971683530?text=Ol%C3%A1%21%20Quero%20saber%20mais%20sobre%20as%20otimiza%C3%A7%C3%B5es%20no%20c%C3%B3digo.%20Vim%20pelo%20site%20RSO%20Digital." target="_blank" rel="noopener noreferrer" class="arrow-link">↗</a>
+                        <a href="https://wa.me/5519971683530?text=Ol%C3%A1%21%20Quero%20saber%20mais%20sobre%20as%20otimiza%C3%A7%C3%B5es%20no%20c%C3%B3digo.%20Vim%20pelo%20site%20RSO%20Digital." target="_blank" rel="noopener noreferrer" class="arrow-link" onclick="gtag('event', 'whatsapp_click');">↗</a>
                     </div>
                 </div>
             </div>
@@ -513,172 +377,265 @@
                     <div class="card-content service-content">
                         <h3>Design de Nível Internacional</h3>
                         <p class="service-description">Temos como referência as maiores premiações de web design globais. Seu site não será apenas um cartão de visitas, será uma plataforma construída para transmitir excelência e qualidade visual.</p>
-                        <a href="https://wa.me/5519971683530?text=Ol%C3%A1%21%20Quero%20saber%20mais%20sobre%20o%20design%20premium.%20Vim%20pelo%20site%20RSO%20Digital." target="_blank" rel="noopener noreferrer" class="arrow-link">↗</a>
+                        <a href="https://wa.me/5519971683530?text=Ol%C3%A1%21%20Quero%20saber%20mais%20sobre%20o%20design%20premium.%20Vim%20pelo%20site%20RSO%20Digital." target="_blank" rel="noopener noreferrer" class="arrow-link" onclick="gtag('event', 'whatsapp_click');">↗</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
     <!-- ========================================== -->
-<!-- ========================================== -->
-<!-- SEÇÃO: PERFORMANCE & CONVERSÃO (PREMIUM)   -->
-<!-- ========================================== -->
-<section class="performance-section" id="performance" aria-label="Por que performance define o sucesso do seu negócio — RSO Digital">
-  <div class="performance-container">
+    <!-- SEÇÃO: PERFORMANCE & CONVERSÃO (PREMIUM)   -->
+    <!-- ========================================== -->
+    <section class="performance-section" id="performance" aria-label="Por que performance define o sucesso do seu negócio — RSO Digital">
+      <div class="performance-container">
 
-    <!-- CABEÇALHO COM LINHA DUPLA -->
-    <div class="perf-header">
-      <div class="perf-header-top">
-        <span class="perf-badge">⚡ PERFORMANCE & CONVERSÃO</span>
-        <span class="perf-badge-line"></span>
-      </div>
-      <h2 class="perf-title">
-        Por que <span class="highlight">performance</span> define<br class="hide-mobile"> o sucesso do seu negócio
-      </h2>
-      <p class="perf-subtitle">
-        Você já entrou em um site que demorou mais de 3 segundos para carregar?<br>
-        Provavelmente fechou a aba e foi procurar outro. Esse comportamento é quase automático hoje em dia.
-      </p>
-      <div class="perf-divider">
-        <span></span><span></span><span></span>
-      </div>
-    </div>
-
-    <!-- GRID DE CARDS -->
-    <div class="performance-grid">
-
-      <!-- CARD 1: ESTATÍSTICA -->
-      <div class="perf-card stat-card">
-        <div class="perf-card-glow"></div>
-        <div class="perf-card-border"></div>
-        <div class="perf-card-header">
-          <svg class="perf-icon-svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="3" width="7" height="7" rx="1" />
-            <rect x="14" y="3" width="7" height="7" rx="1" />
-            <rect x="3" y="14" width="7" height="7" rx="1" />
-            <rect x="14" y="14" width="7" height="7" rx="1" />
-          </svg>
-          <span class="perf-card-tag">DADO</span>
-        </div>
-        <div class="stat-number">53%</div>
-        <p class="stat-label">dos usuários abandonam um site<br>que leva mais de <strong>3 segundos</strong> para carregar</p>
-        <div class="stat-source">Fonte: Google / Think with Google</div>
-        <div class="perf-card-footer-line"></div>
-      </div>
-
-      <!-- CARD 2: IMPACTO NA CONVERSÃO -->
-      <div class="perf-card impact-card">
-        <div class="perf-card-glow"></div>
-        <div class="perf-card-border"></div>
-        <div class="perf-card-header">
-          <svg class="perf-icon-svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="23 18 13.5 8.5 8.5 13.5 1 6" />
-            <polyline points="17 18 23 18 23 12" />
-          </svg>
-          <span class="perf-card-tag">IMPACTO</span>
-        </div>
-        <h3 class="perf-card-title">Cada segundo <span class="highlight">custa vendas</span></h3>
-        <p class="perf-card-desc">
-          Cada segundo adicional no carregamento do seu site pode reduzir a taxa de conversão em até <strong>7%</strong>.
-          Enquanto seu concorrente entrega uma experiência fluida, você perde clientes que sequer chegam a ver o que você oferece.
-        </p>
-        <div class="perf-card-footer-line"></div>
-      </div>
-
-      <!-- CARD 3: SOLUÇÃO (CÓDIGO LIMPO) -->
-      <div class="perf-card solution-card">
-        <div class="perf-card-glow"></div>
-        <div class="perf-card-border"></div>
-        <div class="perf-card-header">
-          <svg class="perf-icon-svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
-          </svg>
-          <span class="perf-card-tag">SOLUÇÃO</span>
-        </div>
-        <h3 class="perf-card-title">Código limpo = <span class="highlight">velocidade extrema</span></h3>
-        <p class="perf-card-desc">
-          Diferente de soluções prontas como Wix ou WordPress com construtores visuais, um site desenvolvido com
-          <strong>código manual (HTML/CSS nativo)</strong> tem uma vantagem brutal em performance.
-          Sem plugins pesados, sem temas genéricos, sem código poluído que o Google precisa ler e interpretar.
-        </p>
-        <div class="perf-card-footer-line"></div>
-      </div>
-
-      <!-- CARD 4: BENEFÍCIOS DIRETOS -->
-      <div class="perf-card benefits-card">
-        <div class="perf-card-glow"></div>
-        <div class="perf-card-border"></div>
-        <div class="perf-card-header">
-          <svg class="perf-icon-svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10" />
-            <circle cx="12" cy="12" r="4" />
-            <line x1="12" y1="2" x2="12" y2="6" />
-            <line x1="12" y1="18" x2="12" y2="22" />
-            <line x1="2" y1="12" x2="6" y2="12" />
-            <line x1="18" y1="12" x2="22" y2="12" />
-          </svg>
-          <span class="perf-card-tag">BENEFÍCIOS</span>
-        </div>
-        <h3 class="perf-card-title">O que você ganha ao investir em <span class="highlight">performance</span></h3>
-        <ul class="perf-benefits">
-          <li>
-            <span class="benefit-icon">▸</span>
-            <div><strong>Mais visitantes qualificados</strong><br><span class="benefit-desc">O Google entrega seu site para quem busca soluções como a sua</span></div>
-          </li>
-          <li>
-            <span class="benefit-icon">▸</span>
-            <div><strong>Mais credibilidade</strong><br><span class="benefit-desc">Um site rápido transmite profissionalismo e confiança</span></div>
-          </li>
-          <li>
-            <span class="benefit-icon">▸</span>
-            <div><strong>Mais conversões</strong><br><span class="benefit-desc">Cada milissegundo de velocidade conta para fechar uma venda</span></div>
-          </li>
-        </ul>
-        <div class="perf-card-footer-line"></div>
-      </div>
-
-    </div>
-
-    <!-- CALLOUT FINAL COM ORGANIZAÇÃO EM BLOCOS -->
-    <div class="performance-callout">
-      <div class="callout-grid">
-        <div class="callout-left">
-          <span class="callout-badge">
-            <svg class="callout-icon-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-            </svg>
-            ATIVO DIGITAL
-          </span>
-          <p class="callout-text">
-            Seu site é seu principal ativo digital. Ele trabalha <strong>24 horas por dia</strong> atraindo, convencendo e convertendo visitantes.
+        <!-- CABEÇALHO COM LINHA DUPLA -->
+        <div class="perf-header">
+          <div class="perf-header-top">
+            <span class="perf-badge">⚡ PERFORMANCE & CONVERSÃO</span>
+            <span class="perf-badge-line"></span>
+          </div>
+          <h2 class="perf-title">
+            Por que <span class="highlight">performance</span> define<br class="hide-mobile"> o sucesso do seu negócio
+          </h2>
+          <p class="perf-subtitle">
+            Você já entrou em um site que demorou mais de 3 segundos para carregar?<br>
+            Provavelmente fechou a aba e foi procurar outro. Esse comportamento é quase automático hoje em dia.
           </p>
-          <p class="callout-text-small">
-            Por que entregar essa missão a uma plataforma genérica que limita seus resultados?
-          </p>
+          <div class="perf-divider">
+            <span></span><span></span><span></span>
+          </div>
         </div>
-        <div class="callout-right">
-          <div class="callout-cta-group">
-            <a href="https://wa.me/5519971683530?text=Ol%C3%A1!%20Quero%20um%20site%20com%20performance%20extrema.%20Vim%20pelo%20site%20RSO%20Digital." target="_blank" rel="noopener noreferrer" class="callout-btn primary">
-              <span>Quero um site que vende</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14"/>
-                <path d="M12 5l7 7-7 7"/>
+
+        <!-- GRID DE CARDS -->
+        <div class="performance-grid">
+
+          <!-- CARD 1: ESTATÍSTICA -->
+          <div class="perf-card stat-card">
+            <div class="perf-card-glow"></div>
+            <div class="perf-card-border"></div>
+            <div class="perf-card-header">
+              <svg class="perf-icon-svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="7" height="7" rx="1" />
+                <rect x="14" y="3" width="7" height="7" rx="1" />
+                <rect x="3" y="14" width="7" height="7" rx="1" />
+                <rect x="14" y="14" width="7" height="7" rx="1" />
               </svg>
-            </a>
-            <a href="#solucoes" class="callout-btn secondary">
-              Ver planos e preços →
-            </a>
+              <span class="perf-card-tag">DADO</span>
+            </div>
+            <div class="stat-number">53%</div>
+            <p class="stat-label">dos usuários abandonam um site<br>que leva mais de <strong>3 segundos</strong> para carregar</p>
+            <div class="stat-source">Fonte: Google / Think with Google</div>
+            <div class="perf-card-footer-line"></div>
           </div>
-          <div class="callout-tags">
-            <span>🚀 Criação de sites profissionais</span>
-            <span>⚡ SEO técnico para empresas</span>
-            <span>🧩 Web design premium</span>
+
+          <!-- CARD 2: IMPACTO NA CONVERSÃO -->
+          <div class="perf-card impact-card">
+            <div class="perf-card-glow"></div>
+            <div class="perf-card-border"></div>
+            <div class="perf-card-header">
+              <svg class="perf-icon-svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="23 18 13.5 8.5 8.5 13.5 1 6" />
+                <polyline points="17 18 23 18 23 12" />
+              </svg>
+              <span class="perf-card-tag">IMPACTO</span>
+            </div>
+            <h3 class="perf-card-title">Cada segundo <span class="highlight">custa vendas</span></h3>
+            <p class="perf-card-desc">
+              Cada segundo adicional no carregamento do seu site pode reduzir a taxa de conversão em até <strong>7%</strong>.
+              Enquanto seu concorrente entrega uma experiência fluida, você perde clientes que sequer chegam a ver o que você oferece.
+            </p>
+            <div class="perf-card-footer-line"></div>
+          </div>
+
+          <!-- CARD 3: SOLUÇÃO (CÓDIGO LIMPO) -->
+          <div class="perf-card solution-card">
+            <div class="perf-card-glow"></div>
+            <div class="perf-card-border"></div>
+            <div class="perf-card-header">
+              <svg class="perf-icon-svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+              </svg>
+              <span class="perf-card-tag">SOLUÇÃO</span>
+            </div>
+            <h3 class="perf-card-title">Código limpo = <span class="highlight">velocidade extrema</span></h3>
+            <p class="perf-card-desc">
+              Diferente de soluções prontas como Wix ou WordPress com construtores visuais, um site desenvolvido com
+              <strong>código manual (HTML/CSS nativo)</strong> tem uma vantagem brutal em performance.
+              Sem plugins pesados, sem temas genéricos, sem código poluído que o Google precisa ler e interpretar.
+            </p>
+            <div class="perf-card-footer-line"></div>
+          </div>
+
+          <!-- CARD 4: BENEFÍCIOS DIRETOS -->
+          <div class="perf-card benefits-card">
+            <div class="perf-card-glow"></div>
+            <div class="perf-card-border"></div>
+            <div class="perf-card-header">
+              <svg class="perf-icon-svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <circle cx="12" cy="12" r="4" />
+                <line x1="12" y1="2" x2="12" y2="6" />
+                <line x1="12" y1="18" x2="12" y2="22" />
+                <line x1="2" y1="12" x2="6" y2="12" />
+                <line x1="18" y1="12" x2="22" y2="12" />
+              </svg>
+              <span class="perf-card-tag">BENEFÍCIOS</span>
+            </div>
+            <h3 class="perf-card-title">O que você ganha ao investir em <span class="highlight">performance</span></h3>
+            <ul class="perf-benefits">
+              <li>
+                <span class="benefit-icon">▸</span>
+                <div><strong>Mais visitantes qualificados</strong><br><span class="benefit-desc">O Google entrega seu site para quem busca soluções como a sua</span></div>
+              </li>
+              <li>
+                <span class="benefit-icon">▸</span>
+                <div><strong>Mais credibilidade</strong><br><span class="benefit-desc">Um site rápido transmite profissionalismo e confiança</span></div>
+              </li>
+              <li>
+                <span class="benefit-icon">▸</span>
+                <div><strong>Mais conversões</strong><br><span class="benefit-desc">Cada milissegundo de velocidade conta para fechar uma venda</span></div>
+              </li>
+            </ul>
+            <div class="perf-card-footer-line"></div>
+          </div>
+
+        </div>
+
+        <!-- CALLOUT FINAL COM ORGANIZAÇÃO EM BLOCOS -->
+        <div class="performance-callout">
+          <div class="callout-grid">
+            <div class="callout-left">
+              <span class="callout-badge">
+                <svg class="callout-icon-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                </svg>
+                ATIVO DIGITAL
+              </span>
+              <p class="callout-text">
+                Seu site é seu principal ativo digital. Ele trabalha <strong>24 horas por dia</strong> atraindo, convencendo e convertendo visitantes.
+              </p>
+              <p class="callout-text-small">
+                Por que entregar essa missão a uma plataforma genérica que limita seus resultados?
+              </p>
+            </div>
+            <div class="callout-right">
+              <div class="callout-cta-group">
+                <a href="https://wa.me/5519971683530?text=Ol%C3%A1!%20Quero%20um%20site%20com%20performance%20extrema.%20Vim%20pelo%20site%20RSO%20Digital." target="_blank" rel="noopener noreferrer" class="callout-btn primary" onclick="gtag('event', 'whatsapp_click');">
+                  <span>Quero um site que vende</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14"/>
+                    <path d="M12 5l7 7-7 7"/>
+                  </svg>
+                </a>
+                <a href="#solucoes" class="callout-btn secondary">
+                  Ver planos e preços →
+                </a>
+              </div>
+              <div class="callout-tags">
+                <span>🚀 Criação de sites profissionais</span>
+                <span>⚡ SEO técnico para empresas</span>
+                <span>🧩 Web design premium</span>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
 
-  </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+<!-- SEÇÃO: CÓDIGO LIMPO & SEO NATIVO (PREMIUM) -->
+<!-- ========================================== -->
+<section class="seo-premium" id="seo">
+    <div class="seo-premium-container">
+
+        <!-- Cabeçalho -->
+        <div class="seo-premium-header">
+            <div class="seo-premium-tag-wrapper">
+                <span class="seo-premium-tag">⚡ ENGENHARIA DE CONVERSÃO</span>
+                <span class="seo-premium-line"></span>
+            </div>
+            <h2 class="seo-premium-title">
+                Criação de sites com <span class="highlight">código limpo</span><br>
+                <span class="seo-premium-subtitle">e SEO nativo que <span class="highlight">vende</span></span>
+            </h2>
+        </div>
+
+        <!-- Grade principal -->
+        <div class="seo-premium-grid">
+
+            <!-- Coluna esquerda: descrição -->
+            <div class="seo-premium-text">
+                <p>
+                    Na <strong>RSO Digital</strong>, cada site é desenvolvido manualmente com 
+                    <strong>HTML e CSS puro</strong>, sem plugins pesados ou temas genéricos. 
+                    Isso garante carregamento em <strong class="highlight">menos de 0,8 segundos</strong>, 
+                    melhor experiência para o usuário e um diferencial competitivo que o Google reconhece.
+                </p>
+                <p>
+                    Seja para um site institucional, uma loja virtual ou um sistema personalizado, 
+                    nossa engenharia de conversão transforma visitantes em <strong>clientes reais</strong>.
+                </p>
+                <div class="seo-premium-results">
+                    <span class="result-badge">📈 +187% leads qualificados</span>
+                    <span class="result-badge">⚡ 0,8s de carregamento</span>
+                    <span class="result-badge">🧩 100% código manual</span>
+                </div>
+                <a href="https://wa.me/5519971683530?text=Ol%C3%A1!%20Quero%20um%20site%20com%20c%C3%B3digo%20limpo%20e%20SEO%20nativo." target="_blank" rel="noopener noreferrer" class="seo-premium-btn" onclick="gtag('event', 'whatsapp_click');">
+                    <span>Quero resultados assim</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14"/>
+                        <path d="M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Coluna direita: números em destaque + depoimento -->
+            <div class="seo-premium-stats">
+                <div class="stat-block">
+                    <div class="stat-number" data-count="187">0</div>
+                    <span class="stat-label">% mais leads qualificados</span>
+                    <span class="stat-period">em 90 dias</span>
+                </div>
+                <div class="stat-block">
+                    <div class="stat-number">0,8<span class="stat-decimal">s</span></div>
+                    <span class="stat-label">de carregamento</span>
+                    <span class="stat-period">média global</span>
+                </div>
+                <div class="stat-block">
+                    <div class="stat-number">100<span class="stat-percent">%</span></div>
+                    <span class="stat-label">código manual</span>
+                    <span class="stat-period">sem plugins</span>
+                </div>
+
+                <div class="seo-premium-testimonial">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M10 11h-4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1z" />
+                        <path d="M18 11h-4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1z" />
+                        <path d="M10 21h-4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1z" />
+                        <path d="M18 21h-4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1z" />
+                    </svg>
+                    <blockquote>
+                        “Clientes da RSO registram, em média, <strong>187% mais leads qualificados</strong> 
+                        nos primeiros 90 dias após a entrega.”
+                    </blockquote>
+                    <cite>— Dado real de clientes</cite>
+                </div>
+            </div>
+        </div>
+
+        <!-- Decoração de fundo: linhas de código -->
+        <div class="seo-premium-bg-decor">
+            <span class="code-line">{</span>
+            <span class="code-line">  "performance": "0.8s"</span>
+            <span class="code-line">  "seo": "nativo"</span>
+            <span class="code-line">  "conversão": "187%"</span>
+            <span class="code-line">}</span>
+        </div>
+
+    </div>
 </section>
 
     <section class="network-section" aria-label="Presença global e performance local — Criação de sites que vendem">
@@ -692,11 +649,11 @@
                     A primeira impressão é digital. Um site lento ou com aparência genérica compromete imediatamente a percepção do cliente sobre o valor do que você vende. Ao construir uma plataforma do zero, garantimos exclusividade visual e a performance necessária para manter o visitante engajado com a sua marca.
                 </p>
                 <div class="button-group animate-item delay-3">
-                    <a href="https://wa.me/5519971683530?text=Ol%C3%A1%21%20Quero%20um%20site%20com%20design%20de%20alto%20padr%C3%A3o.%20Vim%20pelo%20site%20RSO%20Digital." target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    <a href="https://wa.me/5519971683530?text=Ol%C3%A1%21%20Quero%20um%20site%20com%20design%20de%20alto%20padr%C3%A3o.%20Vim%20pelo%20site%20RSO%20Digital." target="_blank" rel="noopener noreferrer" class="btn btn-primary" onclick="gtag('event', 'whatsapp_click');">
                         Quero um site premium
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
                     </a>
-                    <a href="https://wa.me/5519971683530?text=Ol%C3%A1%21%20Vim%20pelo%20site%20RSO%20Digital%20e%20quero%20conversar%20sobre%20minhas%20ideias." target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                    <a href="https://wa.me/5519971683530?text=Ol%C3%A1%21%20Vim%20pelo%20site%20RSO%20Digital%20e%20quero%20conversar%20sobre%20minhas%20ideias." target="_blank" rel="noopener noreferrer" class="btn btn-outline" onclick="gtag('event', 'whatsapp_click');">
                         Falar sobre o projeto →
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
                     </a>
@@ -712,188 +669,188 @@
     </section>
 
     <!-- ==================== SEÇÃO "SOLUÇÕES" (PROMO) ==================== -->
-<section class="services-promo" id="solucoes" aria-label="Soluções e planos — Preços de criação de sites e serviços digitais">
-  <div class="promo-container">
-    <div class="promo-header">
-      <div class="promo-badge">
-        <span class="pulse-dot"></span> OFERTA DE LANÇAMENTO • VAGAS LIMITADAS
-      </div>
-      <h2 class="promo-title">Invista agora com até <span class="highlight">47% de desconto</span></h2>
-      <p class="promo-subtitle">Estou montando minha carteira inicial de cases de sucesso. Esses preços exclusivos expiram em <strong>30 dias</strong> — depois, os valores retornam ao normal. Garanta sua vaga e comece a colher resultados antes da concorrência.</p>
-      <div class="countdown-wrapper">
-        <div class="time-block">
-          <span class="time-value" id="days">30</span>
-          <span class="time-label">DIAS</span>
+    <section class="services-promo" id="solucoes" aria-label="Soluções e planos — Preços de criação de sites e serviços digitais">
+      <div class="promo-container">
+        <div class="promo-header">
+          <div class="promo-badge">
+            <span class="pulse-dot"></span> OFERTA DE LANÇAMENTO • VAGAS LIMITADAS
+          </div>
+          <h2 class="promo-title">Invista agora com até <span class="highlight">47% de desconto</span></h2>
+          <p class="promo-subtitle">Estou montando minha carteira inicial de cases de sucesso. Esses preços exclusivos expiram em <strong>30 dias</strong> — depois, os valores retornam ao normal. Garanta sua vaga e comece a colher resultados antes da concorrência.</p>
+          <div class="countdown-wrapper">
+            <div class="time-block">
+              <span class="time-value" id="days">30</span>
+              <span class="time-label">DIAS</span>
+            </div>
+            <span class="time-separator">:</span>
+            <div class="time-block">
+              <span class="time-value" id="hours">00</span>
+              <span class="time-label">HRS</span>
+            </div>
+            <span class="time-separator">:</span>
+            <div class="time-block">
+              <span class="time-value" id="minutes">00</span>
+              <span class="time-label">MIN</span>
+            </div>
+            <span class="time-separator">:</span>
+            <div class="time-block">
+              <span class="time-value" id="seconds">00</span>
+              <span class="time-label">SEG</span>
+            </div>
+          </div>
         </div>
-        <span class="time-separator">:</span>
-        <div class="time-block">
-          <span class="time-value" id="hours">00</span>
-          <span class="time-label">HRS</span>
-        </div>
-        <span class="time-separator">:</span>
-        <div class="time-block">
-          <span class="time-value" id="minutes">00</span>
-          <span class="time-label">MIN</span>
-        </div>
-        <span class="time-separator">:</span>
-        <div class="time-block">
-          <span class="time-value" id="seconds">00</span>
-          <span class="time-label">SEG</span>
-        </div>
-      </div>
-    </div>
 
-    <div class="promo-grid">
-      <!-- Plano Básico -->
-      <div class="promo-card">
-        <div class="card-glow"></div>
-        <div class="card-top">
-          <div class="service-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 4h16v16H4z" />
-              <path d="M9 8h6" />
-              <path d="M9 12h4" />
-            </svg>
+        <div class="promo-grid">
+          <!-- Plano Básico -->
+          <div class="promo-card">
+            <div class="card-glow"></div>
+            <div class="card-top">
+              <div class="service-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16v16H4z" />
+                  <path d="M9 8h6" />
+                  <path d="M9 12h4" />
+                </svg>
+              </div>
+              <h3 class="service-name">Básico</h3>
+            </div>
+            <div class="pricing-area">
+              <span class="old-price">De R$ 1.200</span>
+              <span class="old-price">De MXN 4.050</span>
+              <div class="price-row main-currency">
+                <span class="currency">R$</span>700<span class="cents">,00</span>
+                <span class="discount-badge">−41%</span>
+              </div>
+              <div class="price-row second-currency">
+                <span class="currency">$</span>3000 <span class="currency-tag">MXN</span>
+              </div>
+            </div>
+            <ul class="benefits-list">
+              <li>✔️ Design responsivo</li>
+              <li>✔️ SEO básico</li>
+              <li>✔️ Entrega em 7 dias</li>
+            </ul>
+            <div class="card-footer">
+              <span class="scarcity-text">⚠️ 4 vagas</span>
+              <a href="https://wa.me/5519971683530?text=Ol%C3%A1%21%20Quero%20garantir%20o%20plano%20B%C3%A1sico.%20Vim%20pelo%20site%20RSO%20Digital." target="_blank" rel="noopener noreferrer" class="promo-cta" onclick="gtag('event', 'whatsapp_click');">Garantir</a>
+            </div>
           </div>
-          <h3 class="service-name">Básico</h3>
-        </div>
-        <div class="pricing-area">
-          <span class="old-price">De R$ 1.200</span>
-          <span class="old-price">De MXN 4.050</span>
-          <div class="price-row main-currency">
-            <span class="currency">R$</span>700<span class="cents">,00</span>
-            <span class="discount-badge">−41%</span>
-          </div>
-          <div class="price-row second-currency">
-            <span class="currency">$</span>2.500 <span class="currency-tag">MXN</span>
-          </div>
-        </div>
-        <ul class="benefits-list">
-          <li>✔️ Design responsivo</li>
-          <li>✔️ SEO básico</li>
-          <li>✔️ Entrega em 7 dias</li>
-        </ul>
-        <div class="card-footer">
-          <span class="scarcity-text">⚠️ 4 vagas</span>
-          <a href="https://wa.me/5519971683530?text=Ol%C3%A1%21%20Quero%20garantir%20o%20plano%20B%C3%A1sico.%20Vim%20pelo%20site%20RSO%20Digital." target="_blank" rel="noopener noreferrer" class="promo-cta">Garantir</a>
-        </div>
-      </div>
 
-      <!-- Plano Premium -->
-      <div class="promo-card popular">
-        <div class="popular-tag">MAIS ESCOLHIDO</div>
-        <div class="card-glow"></div>
-        <div class="card-top">
-          <div class="service-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M6 9l3-5 3 5 3-5 3 5" />
-              <path d="M6 15h12" />
-              <path d="M12 15v6" />
-              <path d="M8 21h8" />
-            </svg>
+          <!-- Plano Premium -->
+          <div class="promo-card popular">
+            <div class="popular-tag">MAIS ESCOLHIDO</div>
+            <div class="card-glow"></div>
+            <div class="card-top">
+              <div class="service-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 9l3-5 3 5 3-5 3 5" />
+                  <path d="M6 15h12" />
+                  <path d="M12 15v6" />
+                  <path d="M8 21h8" />
+                </svg>
+              </div>
+              <h3 class="service-name">Premium</h3>
+            </div>
+            <div class="pricing-area">
+              <span class="old-price">De R$ 3.800</span>
+              <span class="old-price">De MXN 10.122</span>
+              <div class="price-row main-currency">
+                <span class="currency">R$</span>2.000<span class="cents">,00</span>
+                <span class="discount-badge highlight-badge">−47%</span>
+              </div>
+              <div class="price-row second-currency">
+                <span class="currency">$</span>7.000 <span class="currency-tag">MXN</span>
+              </div>
+            </div>
+            <ul class="benefits-list">
+              <li>✔️ SEO técnico avançado</li>
+              <li>✔️ Funil de conversão</li>
+              <li>✔️ Suporte 24/7</li>
+            </ul>
+            <div class="card-footer">
+              <span class="scarcity-text">⚠️ 2 vagas</span>
+              <a href="https://wa.me/5519971683530?text=Ol%C3%A1%21%20Quero%20o%20plano%20Premium.%20Vim%20pelo%20site%20RSO%20Digital." target="_blank" rel="noopener noreferrer" class="promo-cta primary" onclick="gtag('event', 'whatsapp_click');">Quero este</a>
+            </div>
           </div>
-          <h3 class="service-name">Premium</h3>
-        </div>
-        <div class="pricing-area">
-          <span class="old-price">De R$ 3.800</span>
-          <span class="old-price">De MXN 10.122</span>
-          <div class="price-row main-currency">
-            <span class="currency">R$</span>2.000<span class="cents">,00</span>
-            <span class="discount-badge highlight-badge">−47%</span>
-          </div>
-          <div class="price-row second-currency">
-            <span class="currency">$</span>7.000 <span class="currency-tag">MXN</span>
-          </div>
-        </div>
-        <ul class="benefits-list">
-          <li>✔️ SEO técnico avançado</li>
-          <li>✔️ Funil de conversão</li>
-          <li>✔️ Suporte 24/7</li>
-        </ul>
-        <div class="card-footer">
-          <span class="scarcity-text">⚠️ 2 vagas</span>
-          <a href="https://wa.me/5519971683530?text=Ol%C3%A1%21%20Quero%20o%20plano%20Premium.%20Vim%20pelo%20site%20RSO%20Digital." target="_blank" rel="noopener noreferrer" class="promo-cta primary">Quero este</a>
-        </div>
-      </div>
 
-      <!-- Plano IA -->
-      <div class="promo-card">
-        <div class="card-glow"></div>
-        <div class="card-top">
-          <div class="service-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="5" y="5" width="14" height="14" rx="2" />
-              <path d="M9 9h6v6H9z" />
-              <path d="M9 3v2" />
-              <path d="M15 3v2" />
-              <path d="M9 19v2" />
-              <path d="M15 19v2" />
-              <path d="M3 9h2" />
-              <path d="M3 15h2" />
-              <path d="M19 9h2" />
-              <path d="M19 15h2" />
-            </svg>
+          <!-- Plano IA -->
+          <div class="promo-card">
+            <div class="card-glow"></div>
+            <div class="card-top">
+              <div class="service-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="5" y="5" width="14" height="14" rx="2" />
+                  <path d="M9 9h6v6H9z" />
+                  <path d="M9 3v2" />
+                  <path d="M15 3v2" />
+                  <path d="M9 19v2" />
+                  <path d="M15 19v2" />
+                  <path d="M3 9h2" />
+                  <path d="M3 15h2" />
+                  <path d="M19 9h2" />
+                  <path d="M19 15h2" />
+                </svg>
+              </div>
+              <h3 class="service-name">IA</h3>
+            </div>
+            <div class="pricing-area">
+              <span class="old-price">De R$ 8.500</span>
+              <span class="old-price">De MXN 10.122</span>
+              <div class="price-row main-currency">
+                <span class="currency">R$</span>5.000<span class="cents">,00</span>
+                <span class="discount-badge">−41%</span>
+              </div>
+              <div class="price-row second-currency">
+                <span class="currency">$</span>20.000 <span class="currency-tag">MXN</span>
+              </div>
+            </div>
+            <ul class="benefits-list">
+              <li>✔️ Automação de processos</li>
+              <li>✔️ IA integrada</li>
+              <li>✔️ Painel exclusivo</li>
+            </ul>
+            <div class="card-footer">
+              <span class="scarcity-text">⚠️ 1 vaga</span>
+              <a href="https://wa.me/5519971683530?text=Ol%C3%A1%21%20Quero%20agendar%20um%20projeto%20de%20IA.%20Vim%20pelo%20site%20RSO%20Digital." target="_blank" rel="noopener noreferrer" class="promo-cta" onclick="gtag('event', 'whatsapp_click');">Agendar</a>
+            </div>
           </div>
-          <h3 class="service-name">IA</h3>
-        </div>
-        <div class="pricing-area">
-          <span class="old-price">De R$ 8.500</span>
-          <span class="old-price">De MXN 10.122</span>
-          <div class="price-row main-currency">
-            <span class="currency">R$</span>5.000<span class="cents">,00</span>
-            <span class="discount-badge">−41%</span>
-          </div>
-          <div class="price-row second-currency">
-            <span class="currency">$</span>20.000 <span class="currency-tag">MXN</span>
-          </div>
-        </div>
-        <ul class="benefits-list">
-          <li>✔️ Automação de processos</li>
-          <li>✔️ IA integrada</li>
-          <li>✔️ Painel exclusivo</li>
-        </ul>
-        <div class="card-footer">
-          <span class="scarcity-text">⚠️ 1 vaga</span>
-          <a href="https://wa.me/5519971683530?text=Ol%C3%A1%21%20Quero%20agendar%20um%20projeto%20de%20IA.%20Vim%20pelo%20site%20RSO%20Digital." target="_blank" rel="noopener noreferrer" class="promo-cta">Agendar</a>
-        </div>
-      </div>
 
-      <!-- Plano App -->
-      <div class="promo-card">
-        <div class="card-glow"></div>
-        <div class="card-top">
-          <div class="service-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="5" y="2" width="14" height="20" rx="2" />
-              <line x1="12" y1="18" x2="12.01" y2="18" />
-            </svg>
+          <!-- Plano App -->
+          <div class="promo-card">
+            <div class="card-glow"></div>
+            <div class="card-top">
+              <div class="service-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="5" y="2" width="14" height="20" rx="2" />
+                  <line x1="12" y1="18" x2="12.01" y2="18" />
+                </svg>
+              </div>
+              <h3 class="service-name">App</h3>
+            </div>
+            <div class="pricing-area">
+              <span class="old-price">De R$ 7.000</span>
+              <span class="old-price">De MXN 23.620</span>
+              <div class="price-row main-currency">
+                <span class="currency">R$</span>4.200<span class="cents">,00</span>
+                <span class="discount-badge">−40%</span>
+              </div>
+              <div class="price-row second-currency">
+                <span class="currency">$</span>16.000 <span class="currency-tag">MXN</span>
+              </div>
+            </div>
+            <ul class="benefits-list">
+              <li>✔️ iOS / Android</li>
+              <li>✔️ Notificações push</li>
+              <li>✔️ Publicação nas lojas</li>
+            </ul>
+            <div class="card-footer">
+              <span class="scarcity-text">⚠️ 2 vagas</span>
+              <a href="https://wa.me/5519971683530?text=Ol%C3%A1%21%20Quero%20or%C3%A7ar%20um%20aplicativo.%20Vim%20pelo%20site%20RSO%20Digital." target="_blank" rel="noopener noreferrer" class="promo-cta" onclick="gtag('event', 'whatsapp_click');">Orçar</a>
+            </div>
           </div>
-          <h3 class="service-name">App</h3>
-        </div>
-        <div class="pricing-area">
-          <span class="old-price">De R$ 7.000</span>
-          <span class="old-price">De MXN 23.620</span>
-          <div class="price-row main-currency">
-            <span class="currency">R$</span>4.200<span class="cents">,00</span>
-            <span class="discount-badge">−40%</span>
-          </div>
-          <div class="price-row second-currency">
-            <span class="currency">$</span>16.000 <span class="currency-tag">MXN</span>
-          </div>
-        </div>
-        <ul class="benefits-list">
-          <li>✔️ iOS / Android</li>
-          <li>✔️ Notificações push</li>
-          <li>✔️ Publicação nas lojas</li>
-        </ul>
-        <div class="card-footer">
-          <span class="scarcity-text">⚠️ 2 vagas</span>
-          <a href="https://wa.me/5519971683530?text=Ol%C3%A1%21%20Quero%20or%C3%A7ar%20um%20aplicativo.%20Vim%20pelo%20site%20RSO%20Digital." target="_blank" rel="noopener noreferrer" class="promo-cta">Orçar</a>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
     <section class="faq-seo-section" aria-label="Perguntas frequentes sobre criação de sites e SEO" style="padding: 3rem 2rem; background: #0d0d0d; border-top: 1px solid rgba(255,255,255,0.05);">
         <div style="max-width: 800px; margin: 0 auto;">
@@ -944,7 +901,9 @@
         </div>
     </section>
 
-    </main><footer class="footer-premium" role="contentinfo" aria-label="Rodapé — RSO Digital">
+    </main>
+
+    <footer class="footer-premium" role="contentinfo" aria-label="Rodapé — RSO Digital">
     <div class="footer-premium-inner">
         <div class="footer-col brand-col">
             <div class="footer-logo">RSO<span class="logo-dot">.</span></div>
@@ -958,17 +917,18 @@
         <div class="footer-col">
             <h4 class="footer-heading">Navegue</h4>
             <ul class="footer-links">
-                <li><a href="#solucoes">Projetos Oferecidos</a></li>
-                <li><a href="#cases">Atuação</a></li>
+                <li><a href="/criacao-de-sites.html">Criação de Sites</a></li>
+                <li><a href="#cases">Cases</a></li>
                 <li><a href="#engenharia">Metodologia</a></li>
-                <li><a href="https://wa.me/5519971683530" target="_blank" rel="noopener noreferrer">Fale Comigo</a></li>
+                <li><a href="/blog/velocidade-site-vende-mais.html">Blog</a></li>
+                <li><a href="https://wa.me/5519971683530" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'whatsapp_click');">Fale Comigo</a></li>
             </ul>
         </div>
 
         <div class="footer-col">
             <h4 class="footer-heading">Foco Técnico</h4>
             <ul class="footer-links">
-                <li><a href="#">Projetos Exclusivos</a></li>
+                <li><a href="/criacao-de-sites.html">Projetos Exclusivos</a></li>
                 <li><a href="#">Código Semântico</a></li>
                 <li><a href="#">Elementos 3D (Spline)</a></li>
             </ul>
@@ -977,7 +937,7 @@
         <div class="footer-col contact-col">
             <h4 class="footer-heading">Conecte-se</h4>
             <p class="footer-phone">
-                <a href="https://wa.me/5519971683530" target="_blank" rel="noopener noreferrer">+55 19 97168-3530</a>
+                <a href="https://wa.me/5519971683530" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'whatsapp_click');">+55 19 97168-3530</a>
             </p>
             <p class="footer-email">
                 <a href="mailto:contato@rsomarketing.com">rafaelsoaresgw@gmail.com</a>
@@ -997,7 +957,7 @@
             <p class="footer-legal">• <a href="#">Desenvolvido de forma independente</a></p>
         </div>
     </div>
-</footer>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
