@@ -1087,7 +1087,7 @@ body {
     left: 0;
     width: 100%;
     height: 180px;
-    background: linear-gradient(to bottom, transparent 0%, #000000 100%);
+    background: linear-gradient(to bottom, transparent 0%, #05070a 100%);
     pointer-events: none;
     z-index: 3;
 }
@@ -2175,7 +2175,7 @@ body {
     left: 0;
     width: 100%;
     height: 120px;
-    background: linear-gradient(to bottom, #000000 0%, transparent 100%);
+    background: linear-gradient(to bottom, #05070a 0%, transparent 100%);
     pointer-events: none;
     z-index: 1;
 }
@@ -2290,7 +2290,7 @@ body {
 .promo-card:hover {
     transform: translateY(-4px);
     border-color: rgba(234, 255, 0, 0.2);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 12px 30px rgba(2, 5, 10, 0.6);
 }
 
 .card-glow {
@@ -3102,4 +3102,35 @@ body {
    ========================================== */
 .hero-video {
     will-change: transform;
+}
+
+/* ============================================================
+   ENCAIXE ENTRE SEÇÕES — bordas na mesma cor (#05070a)
+   As seções radiais terminavam em #000 e as vizinhas eram
+   #05070a → criava um degrau/linha. Aqui forçamos o topo e a
+   base de cada seção a virar #05070a (camada de fundo, atrás
+   do conteúdo). Assim toda junção fica #05070a contra #05070a
+   = sem linha. Nenhum texto é coberto.
+   ============================================================ */
+.performance-section,
+.seo-premium,
+.portfolio-showcase,
+.faq-seo-section {
+    border-top: none !important;
+}
+
+.performance-section {
+    background:
+        linear-gradient(to bottom, #05070a, rgba(5,7,10,0) 70px, rgba(5,7,10,0) calc(100% - 70px), #05070a),
+        radial-gradient(circle at 30% 20%, #0d1117 0%, #05070a 60%, #000000 100%);
+}
+.seo-premium {
+    background:
+        linear-gradient(to bottom, #05070a, rgba(5,7,10,0) 70px, rgba(5,7,10,0) calc(100% - 70px), #05070a),
+        radial-gradient(circle at 30% 20%, #0d1117 0%, #05070a 60%, #000 100%);
+}
+.services-promo {
+    background:
+        linear-gradient(to bottom, #05070a, rgba(5,7,10,0) 70px, rgba(5,7,10,0) calc(100% - 70px), #05070a),
+        radial-gradient(circle at 78% 50%, #081423 0%, #040811 25%, #010106 55%, #000000 100%);
 }

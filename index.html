@@ -611,6 +611,90 @@
             </div>
         </section>
 
+        <!-- ==================== SEÇÃO: PORTFÓLIO DE PROJETOS ==================== -->
+        <section class="portfolio-showcase" id="portfolio" aria-label="Portfólio de sites criados pela RSO Digital">
+            <style>
+            .portfolio-showcase{background:#05070a;padding:6rem 2rem;border-top:1px solid rgba(255,255,255,0.05);}
+            .portfolio-inner{max-width:1200px;margin:0 auto;}
+            .portfolio-head{text-align:center;margin-bottom:3.5rem;}
+            .portfolio-tag-wrap{display:inline-flex;align-items:center;gap:0.8rem;margin-bottom:1.2rem;}
+            .portfolio-tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#eaff00;background:rgba(234,255,0,0.07);border:1px solid rgba(234,255,0,0.12);padding:0.35rem 1.2rem;border-radius:40px;white-space:nowrap;}
+            .portfolio-title{font-size:clamp(2rem,5vw,3.2rem);line-height:1.05;color:#fff;font-weight:800;letter-spacing:-0.02em;margin:0 0 1rem;}
+            .portfolio-title .highlight{color:#eaff00;font-style:italic;}
+            .portfolio-sub{color:rgba(255,255,255,0.6);font-size:1.05rem;max-width:620px;margin:0 auto;line-height:1.6;}
+            .portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+            .pf-card{position:relative;border-radius:20px;overflow:hidden;background:#0d1117;border:1px solid rgba(255,255,255,0.06);min-height:460px;display:flex;flex-direction:column;justify-content:flex-end;transition:transform .35s ease,border-color .35s ease;}
+            .pf-card:hover{transform:translateY(-6px);border-color:rgba(234,255,0,0.35);}
+            .pf-bg{position:absolute;inset:0;z-index:0;}
+            .pf-bg img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
+            .pf-card:hover .pf-bg img{transform:scale(1.06);}
+            .pf-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,13,13,0.15) 0%,rgba(13,13,13,0.72) 55%,rgba(13,13,13,0.97) 100%);z-index:1;}
+            .pf-content{position:relative;z-index:2;padding:1.8rem;}
+            .pf-cat{display:inline-block;font-size:0.68rem;text-transform:uppercase;letter-spacing:1px;font-weight:700;background:#eaff00;color:#000;padding:0.25rem 0.7rem;border-radius:20px;margin-bottom:0.9rem;}
+            .pf-name{font-size:1.5rem;color:#fff;font-weight:800;margin:0 0 0.3rem;letter-spacing:-0.01em;}
+            .pf-role{font-size:0.82rem;color:#eaff00;margin:0 0 0.8rem;font-weight:600;}
+            .pf-desc{font-size:0.9rem;color:rgba(255,255,255,0.72);line-height:1.55;margin:0 0 1.3rem;}
+            .pf-btn{display:inline-flex;align-items:center;gap:0.4rem;background:rgba(255,255,255,0.1);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,0.18);padding:0.55rem 1.1rem;border-radius:30px;font-size:0.85rem;font-weight:600;color:#fff;text-decoration:none;transition:background .2s,color .2s,border-color .2s;}
+            .pf-btn:hover{background:#eaff00;color:#000;border-color:#eaff00;}
+            .portfolio-cta{text-align:center;margin-top:3rem;}
+            .portfolio-cta a{display:inline-flex;align-items:center;gap:0.5rem;background:#eaff00;color:#000;font-weight:700;padding:0.9rem 2rem;border-radius:40px;text-decoration:none;font-size:0.95rem;transition:transform .2s;}
+            .portfolio-cta a:hover{transform:scale(1.04);}
+            @media(max-width:900px){.portfolio-grid{grid-template-columns:1fr;}.pf-card{min-height:420px;}}
+            </style>
+            <div class="portfolio-inner">
+                <div class="portfolio-head">
+                    <div class="portfolio-tag-wrap">
+                        <span class="portfolio-tag">⚡ PORTFÓLIO DE PROJETOS</span>
+                    </div>
+                    <h2 class="portfolio-title">Sites que já <span class="highlight">entregamos</span></h2>
+                    <p class="portfolio-sub">Projetos reais no ar, criados do zero — no Brasil e no México.</p>
+                </div>
+                <div class="portfolio-grid">
+
+                    <article class="pf-card">
+                        <div class="pf-bg"><img src="https://lovely-crisp-7517c2.netlify.app/assets/pexels-laura-garcia-1667452-4006692.jpg" alt="Belleza &amp; Estilo — site de beleza a domicílio" loading="lazy" decoding="async"></div>
+                        <div class="pf-overlay"></div>
+                        <div class="pf-content">
+                            <span class="pf-cat">Beleza • México</span>
+                            <h3 class="pf-name">Belleza &amp; Estilo</h3>
+                            <p class="pf-role">Serviços de beleza a domicílio • Cidade do México</p>
+                            <p class="pf-desc">Site elegante para um estúdio de beleza a domicílio: manicure, pedicure, depilação, cílios e maquiagem. Galeria de trabalhos, depoimentos e formulário de contato, com design sofisticado que transmite confiança e converte visitantes em clientes.</p>
+                            <a class="pf-btn" href="https://lovely-crisp-7517c2.netlify.app/" target="_blank" rel="noopener noreferrer">Ver projeto ao vivo →</a>
+                        </div>
+                    </article>
+
+                    <article class="pf-card">
+                        <div class="pf-bg"><img src="https://fotoarcee.com.mx/img/fd3PfavaULEOqoI2kVj4XmiR5g.webp" alt="FOTOARCEE — estúdio fotográfico premium em CDMX" loading="lazy" decoding="async"></div>
+                        <div class="pf-overlay"></div>
+                        <div class="pf-content">
+                            <span class="pf-cat">Fotografia • México</span>
+                            <h3 class="pf-name">FOTOARCEE</h3>
+                            <p class="pf-role">Estúdio fotográfico premium • CDMX</p>
+                            <p class="pf-desc">Experiência visual cinematográfica para um estúdio fotográfico com mais de 12 anos de trajetória. Portfólio imersivo, animações fluidas e copy persuasiva em espanhol, posicionando a marca como referência em Ciudad de México.</p>
+                            <a class="pf-btn" href="https://fotoarcee.com.mx" target="_blank" rel="noopener noreferrer">Ver projeto ao vivo →</a>
+                        </div>
+                    </article>
+
+                    <article class="pf-card">
+                        <div class="pf-bg"><img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&amp;h=600&amp;fit=crop" alt="Jardim do Alvorecer — espiritualidade e cura holística" loading="lazy" decoding="async"></div>
+                        <div class="pf-overlay"></div>
+                        <div class="pf-content">
+                            <span class="pf-cat">Espiritualidade • Brasil</span>
+                            <h3 class="pf-name">Jardim do Alvorecer</h3>
+                            <p class="pf-role">Espiritualidade e cura holística</p>
+                            <p class="pf-desc">Site acolhedor para um centro de terapias holísticas: Apometria, Reiki e Fitoterapia. Estrutura clara para serviços, cursos e palestras, com identidade visual serena que reflete a proposta de cura e transformação.</p>
+                            <a class="pf-btn" href="https://rafaelsoaresgw.github.io/jardim/" target="_blank" rel="noopener noreferrer">Ver projeto ao vivo →</a>
+                        </div>
+                    </article>
+
+                </div>
+                <div class="portfolio-cta">
+                    <a href="https://wa.me/5519971683530?text=Ol%C3%A1%21%20Vi%20o%20portf%C3%B3lio%20e%20quero%20um%20site%20assim.%20Vim%20pelo%20site%20RSO%20Digital." target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'whatsapp_click');">Quero um site assim →</a>
+                </div>
+            </div>
+        </section>
+
+
         <!-- ==================== SEÇÃO "SOLUÇÕES" (PROMO) ==================== -->
         <section class="services-promo" id="solucoes" aria-label="Soluções e planos — Preços de criação de sites e serviços digitais">
             <div class="promo-container">
@@ -659,10 +743,10 @@
                         </div>
                         <div class="pricing-area">
                             <span class="old-price">De R$ 1.200</span>
-                            <span class="old-price">De MXN 4.050</span>
+                            <span class="old-price">De MXN 4.110</span>
                             <div class="price-row main-currency">
-                                <span class="currency">R$</span>700<span class="cents">,00</span>
-                                <span class="discount-badge">−41%</span>
+                                <span class="currency">R$</span>877<span class="cents">,00</span>
+                                <span class="discount-badge">−27%</span>
                             </div>
                             <div class="price-row second-currency">
                                 <span class="currency">$</span>3000 <span class="currency-tag">MXN</span>
@@ -696,7 +780,7 @@
                         </div>
                         <div class="pricing-area">
                             <span class="old-price">De R$ 3.800</span>
-                            <span class="old-price">De MXN 10.122</span>
+                            <span class="old-price">De MXN 13.200</span>
                             <div class="price-row main-currency">
                                 <span class="currency">R$</span>2.000<span class="cents">,00</span>
                                 <span class="discount-badge highlight-badge">−47%</span>
@@ -738,13 +822,13 @@
                         </div>
                         <div class="pricing-area">
                             <span class="old-price">De R$ 8.500</span>
-                            <span class="old-price">De MXN 10.122</span>
+                            <span class="old-price">De MXN 29.000</span>
                             <div class="price-row main-currency">
                                 <span class="currency">R$</span>5.000<span class="cents">,00</span>
                                 <span class="discount-badge">−41%</span>
                             </div>
                             <div class="price-row second-currency">
-                                <span class="currency">$</span>20.000 <span class="currency-tag">MXN</span>
+                                <span class="currency">$</span>17.000 <span class="currency-tag">MXN</span>
                             </div>
                         </div>
                         <ul class="benefits-list">
@@ -772,13 +856,13 @@
                         </div>
                         <div class="pricing-area">
                             <span class="old-price">De R$ 7.000</span>
-                            <span class="old-price">De MXN 23.620</span>
+                            <span class="old-price">De MXN 24.000</span>
                             <div class="price-row main-currency">
                                 <span class="currency">R$</span>4.200<span class="cents">,00</span>
                                 <span class="discount-badge">−40%</span>
                             </div>
                             <div class="price-row second-currency">
-                                <span class="currency">$</span>16.000 <span class="currency-tag">MXN</span>
+                                <span class="currency">$</span>14.400 <span class="currency-tag">MXN</span>
                             </div>
                         </div>
                         <ul class="benefits-list">
@@ -795,7 +879,7 @@
             </div>
         </section>
 
-        <section class="faq-seo-section" aria-label="Perguntas frequentes sobre criação de sites e SEO" style="padding: 3rem 2rem; background: #0d0d0d; border-top: 1px solid rgba(255,255,255,0.05);">
+        <section class="faq-seo-section" aria-label="Perguntas frequentes sobre criação de sites e SEO" style="padding: 3rem 2rem; background: #05070a;">
             <div style="max-width: 800px; margin: 0 auto;">
                 <h2 style="font-size: 1.1rem; color: rgba(255,255,255,0.5); font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 2rem; text-align: center;">Perguntas Frequentes</h2>
                 <div itemscope itemtype="https://schema.org/FAQPage">
