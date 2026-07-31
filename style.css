@@ -209,7 +209,7 @@ body {
     text-shadow: 0 0 60px rgba(234, 255, 0, 0.15);
     display: inline-block;
     line-height: 1;
-    padding: 0.6em 0.1em 0.7em;
+    padding: 0.6em 0.45em 0.7em 0.3em;
     overflow: visible;
     transform: scale(1);
     box-decoration-break: clone;
@@ -3133,4 +3133,34 @@ body {
     background:
         linear-gradient(to bottom, #05070a, rgba(5,7,10,0) 70px, rgba(5,7,10,0) calc(100% - 70px), #05070a),
         radial-gradient(circle at 78% 50%, #081423 0%, #040811 25%, #010106 55%, #000000 100%);
+}
+/* ============================================================
+   Botão "Ver projeto ao vivo →" dos cases (páginas internas)
+   A classe .explore-link não tinha estilo — ficava link cru.
+   Agora é um botão pill com o acento do site, que preenche no hover.
+   ============================================================ */
+.explore-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.6rem;
+    border: 1px solid rgba(234, 255, 0, 0.35);
+    border-radius: 40px;
+    background: rgba(234, 255, 0, 0.06);
+    color: #eaff00;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    width: fit-content;
+    transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+.explore-link:hover {
+    background: #eaff00;
+    color: #000;
+    border-color: #eaff00;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(234, 255, 0, 0.22);
+}
+.explore-link:active {
+    transform: translateY(0);
 }

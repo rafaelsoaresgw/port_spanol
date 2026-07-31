@@ -875,6 +875,57 @@
                             <a href="https://wa.me/5519971683530?text=Ol%C3%A1%21%20Quero%20or%C3%A7ar%20um%20aplicativo.%20Vim%20pelo%20site%20RSO%20Digital." target="_blank" rel="noopener noreferrer" class="promo-cta" onclick="gtag('event', 'whatsapp_click');">Orçar</a>
                         </div>
                     </div>
+
+                    <!-- Plano Loja Virtual / E-commerce (sob consulta) -->
+                    <div class="ecommerce-card">
+                        <style>
+                        .ecommerce-card{grid-column:1 / -1;display:flex;gap:2rem;align-items:center;justify-content:space-between;flex-wrap:wrap;background:linear-gradient(135deg, rgba(234,255,0,0.045), rgba(255,255,255,0.02));border:1px solid rgba(234,255,0,0.16);border-radius:14px;padding:2rem;margin-top:0.5rem;}
+                        .ec-left{flex:1 1 380px;min-width:260px;}
+                        .ec-head{display:flex;align-items:center;gap:1rem;margin-bottom:1rem;}
+                        .ec-icon{width:48px;height:48px;flex:0 0 48px;border-radius:12px;background:rgba(234,255,0,0.1);display:flex;align-items:center;justify-content:center;color:#eaff00;}
+                        .ec-tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:#eaff00;background:rgba(234,255,0,0.08);border:1px solid rgba(234,255,0,0.15);padding:0.2rem 0.7rem;border-radius:30px;margin-bottom:0.45rem;}
+                        .ec-name{font-size:1.4rem;color:#fff;font-weight:800;margin:0;letter-spacing:-0.01em;}
+                        .ec-name span{color:rgba(255,255,255,0.4);font-weight:500;font-size:1rem;}
+                        .ec-desc{color:rgba(255,255,255,0.6);font-size:0.9rem;line-height:1.55;margin:0 0 1rem;}
+                        .ec-benefits{display:flex;flex-wrap:wrap;gap:0.5rem 1.3rem;}
+                        .ec-benefits span{color:rgba(255,255,255,0.82);font-size:0.82rem;}
+                        .ec-right{flex:0 0 240px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:0.3rem;border-left:1px solid rgba(255,255,255,0.08);padding-left:2rem;}
+                        .ec-price{font-size:1.6rem;font-weight:800;color:#eaff00;line-height:1.1;}
+                        .ec-price-note{font-size:0.8rem;color:rgba(255,255,255,0.5);}
+                        .ec-cta{margin-top:0.7rem;display:inline-flex;align-items:center;gap:0.4rem;background:#eaff00;color:#000;font-weight:700;padding:0.7rem 1.6rem;border-radius:30px;text-decoration:none;font-size:0.9rem;transition:transform .2s;}
+                        .ec-cta:hover{transform:scale(1.05);}
+                        .ec-sub{font-size:0.72rem;color:rgba(255,255,255,0.35);max-width:210px;line-height:1.4;}
+                        @media(max-width:760px){.ec-right{border-left:none;border-top:1px solid rgba(255,255,255,0.08);padding-left:0;padding-top:1.3rem;flex:1 1 100%;}.ecommerce-card{padding:1.5rem;}}
+                        </style>
+                        <div class="ec-left">
+                            <div class="ec-head">
+                                <div class="ec-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M3 9l1.2-5h15.6L21 9" />
+                                        <path d="M4 9v10a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V9" />
+                                        <path d="M9 13h6" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <span class="ec-tag">PERSONALIZADO</span>
+                                    <h3 class="ec-name">Loja Virtual <span>· E-commerce</span></h3>
+                                </div>
+                            </div>
+                            <p class="ec-desc">Loja completa para vender online: catálogo, carrinho, checkout e pagamentos. O valor depende da quantidade de produtos, integrações e funcionalidades — por isso montamos um orçamento personalizado para você.</p>
+                            <div class="ec-benefits">
+                                <span>✔️ Catálogo de produtos</span>
+                                <span>✔️ Carrinho e checkout</span>
+                                <span>✔️ Pagamentos online</span>
+                                <span>✔️ Painel de gestão</span>
+                            </div>
+                        </div>
+                        <div class="ec-right">
+                            <span class="ec-price">Sob consulta</span>
+                            <span class="ec-price-note">Orçamento conforme seu projeto</span>
+                            <a class="ec-cta" href="https://wa.me/5519971683530?text=Ol%C3%A1%21%20Quero%20um%20or%C3%A7amento%20para%20uma%20Loja%20Virtual%20%28E-commerce%29.%20Vim%20pelo%20site%20RSO%20Digital." target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'whatsapp_click');">Pedir orçamento →</a>
+                            <span class="ec-sub">Preço depende dos produtos e integrações</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1018,67 +1069,102 @@
             }, 120);
         });
 
-        // Relógio local
+        // ===== Relógio + Localização + Clima AO VIVO (baseado no visitante) =====
+        let visitorTZ = null;
         function updateClock() {
-            const now = new Date();
-            const timeString = now.toTimeString().split(' ')[0];
             const display = document.getElementById('datetimeDisplay');
-            if (display) display.textContent = timeString;
+            if (!display) return;
+            try {
+                display.textContent = new Intl.DateTimeFormat('pt-BR', {
+                    hour: '2-digit', minute: '2-digit', second: '2-digit',
+                    hour12: false, timeZone: visitorTZ || undefined
+                }).format(new Date());
+            } catch (e) {
+                display.textContent = new Date().toTimeString().split(' ')[0];
+            }
         }
         setInterval(updateClock, 1000);
         updateClock();
 
-        // Geolocalização + clima (simples)
-        async function fetchLocationAndWeather() {
-            try {
-                const ipRes = await fetch('https://api.ipapi.co/json/');
-                const ipData = await ipRes.json();
-                const city = ipData.city || 'Rio Claro';
-                const region = ipData.region || 'SP';
-                const country = ipData.country_name || 'Brasil';
-                const locDisplay = document.getElementById('locationDisplay');
-                if (locDisplay) locDisplay.textContent = `${city}, ${region} • ${country}`;
+        const SPANISH_CC = new Set(['MX','ES','AR','CO','CL','PE','VE','EC','GT','CU','BO','DO','HN','PY','SV','NI','CR','PA','UY','GQ','PR']);
+        const COUNTRY_PT = {BR:'Brasil',MX:'México',US:'Estados Unidos',PT:'Portugal',AR:'Argentina',CO:'Colômbia',CL:'Chile',PE:'Peru',ES:'Espanha',EC:'Equador',VE:'Venezuela',UY:'Uruguai',PY:'Paraguai',BO:'Bolívia',GT:'Guatemala',CR:'Costa Rica',PA:'Panamá',DO:'República Dominicana',CU:'Cuba',HN:'Honduras',SV:'El Salvador',NI:'Nicarágua',PR:'Porto Rico',CA:'Canadá',GB:'Reino Unido',FR:'França',DE:'Alemanha',IT:'Itália'};
+        const COUNTRY_ES = {BR:'Brasil',MX:'México',US:'Estados Unidos',PT:'Portugal',AR:'Argentina',CO:'Colombia',CL:'Chile',PE:'Perú',ES:'España',EC:'Ecuador',VE:'Venezuela',UY:'Uruguay',PY:'Paraguay',BO:'Bolivia',GT:'Guatemala',CR:'Costa Rica',PA:'Panamá',DO:'República Dominicana',CU:'Cuba',HN:'Honduras',SV:'El Salvador',NI:'Nicaragua',PR:'Puerto Rico',CA:'Canadá',GB:'Reino Unido',FR:'Francia',DE:'Alemania',IT:'Italia'};
+        // weathercode -> [PT, ES, ícone dia, ícone noite]
+        const WEATHER = {
+            0:['Céu limpo','Cielo despejado','☀️','🌙'],
+            1:['Predominantemente limpo','Mayormente despejado','🌤️','🌙'],
+            2:['Parcialmente nublado','Parcialmente nublado','⛅','☁️'],
+            3:['Nublado','Nublado','☁️','☁️'],
+            45:['Neblina','Niebla','🌫️','🌫️'],48:['Neblina','Niebla','🌫️','🌫️'],
+            51:['Chuvisco','Llovizna','🌦️','🌧️'],53:['Chuvisco','Llovizna','🌦️','🌧️'],55:['Chuvisco','Llovizna','🌦️','🌧️'],
+            56:['Chuvisco congelante','Llovizna helada','🌧️','🌧️'],57:['Chuvisco congelante','Llovizna helada','🌧️','🌧️'],
+            61:['Chuva leve','Lluvia ligera','🌧️','🌧️'],63:['Chuva','Lluvia','🌧️','🌧️'],65:['Chuva forte','Lluvia fuerte','🌧️','🌧️'],
+            66:['Chuva congelante','Lluvia helada','🌧️','🌧️'],67:['Chuva congelante','Lluvia helada','🌧️','🌧️'],
+            71:['Neve leve','Nieve ligera','❄️','❄️'],73:['Neve','Nieve','❄️','❄️'],75:['Neve forte','Nieve fuerte','❄️','❄️'],77:['Grãos de neve','Granos de nieve','❄️','❄️'],
+            80:['Pancadas','Chubascos','🌦️','🌧️'],81:['Pancadas','Chubascos','🌧️','🌧️'],82:['Pancadas fortes','Aguaceros fuertes','⛈️','⛈️'],
+            85:['Neve','Nieve','❄️','❄️'],86:['Neve forte','Nieve fuerte','❄️','❄️'],
+            95:['Tempestade','Tormenta','⛈️','⛈️'],96:['Tempestade','Tormenta','⛈️','⛈️'],99:['Tempestade','Tormenta','⛈️','⛈️']
+        };
 
-                const lat = ipData.latitude || -22.4149;
-                const lon = ipData.longitude || -47.5651;
-                const weatherRes = await fetch(
-                    `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true&timezone=auto`
-                );
-                const weatherData = await weatherRes.json();
-                const temp = weatherData.current_weather?.temperature || '--';
-                const cond = weatherData.current_weather?.weathercode || 0;
-                const tempDisplay = document.getElementById('tempValue');
-                if (tempDisplay) tempDisplay.textContent = temp;
-                const condDisplay = document.getElementById('weatherCondition');
-                const iconDisplay = document.getElementById('weatherIcon');
-                const conditions = {
-                    0: ['Céu limpo', '☀️'],
-                    1: ['Parcialmente nublado', '⛅'],
-                    2: ['Nublado', '☁️'],
-                    3: ['Nublado', '☁️'],
-                    45: ['Neblina', '🌫️'],
-                    48: ['Neblina', '🌫️'],
-                    51: ['Chuvisco', '🌦️'],
-                    61: ['Chuva', '🌧️'],
-                    63: ['Chuva', '🌧️'],
-                    71: ['Neve', '❄️'],
-                    80: ['Pancadas', '🌧️'],
-                    95: ['Tempestade', '⛈️']
-                };
-                const [desc, icon] = conditions[cond] || ['Sincronizando', '🌎'];
-                if (condDisplay) condDisplay.textContent = desc;
-                if (iconDisplay) iconDisplay.textContent = icon;
-            } catch (e) {
-                console.warn('Erro ao buscar dados de localização/clima', e);
-                const locDisplay = document.getElementById('locationDisplay');
-                if (locDisplay) locDisplay.textContent = 'Rio Claro, SP • Brasil';
-                const tempDisplay = document.getElementById('tempValue');
-                if (tempDisplay) tempDisplay.textContent = '22';
-                const condDisplay = document.getElementById('weatherCondition');
-                if (condDisplay) condDisplay.textContent = 'Ensolarado';
-                const iconDisplay = document.getElementById('weatherIcon');
-                if (iconDisplay) iconDisplay.textContent = '☀️';
+        async function getVisitorInfo() {
+            try {
+                const r = await fetch('https://ipapi.co/json/');
+                if (r.ok) {
+                    const d = await r.json();
+                    if (d && !d.error && (d.city || d.country_code)) {
+                        return { city: d.city, region: d.region, cc: d.country_code, lat: d.latitude, lon: d.longitude, tz: d.timezone };
+                    }
+                }
+            } catch (e) {}
+            try {
+                const r = await fetch('https://ipwho.is/');
+                if (r.ok) {
+                    const d = await r.json();
+                    if (d && d.success !== false) {
+                        return { city: d.city, region: d.region, cc: d.country_code, lat: d.latitude, lon: d.longitude, tz: (d.timezone && d.timezone.id) };
+                    }
+                }
+            } catch (e) {}
+            return null;
+        }
+
+        async function fetchLocationAndWeather() {
+            const locDisplay = document.getElementById('locationDisplay');
+            const condDisplay = document.getElementById('weatherCondition');
+            const info = await getVisitorInfo();
+            if (!info) {
+                if (locDisplay) locDisplay.textContent = '—';
+                if (condDisplay) condDisplay.textContent = '—';
+                return;
             }
+            let es;
+            let saved = null; try { saved = localStorage.getItem('rso_lang'); } catch (e) {}
+            if (saved === 'es') es = true;
+            else if (saved === 'pt') es = false;
+            else es = SPANISH_CC.has(info.cc) || (navigator.language || '').toLowerCase().startsWith('es');
+
+            visitorTZ = info.tz || null;
+            updateClock();
+
+            const country = (es ? COUNTRY_ES : COUNTRY_PT)[info.cc] || '';
+            let place = info.city || '';
+            if (info.region && info.region !== info.city) place = place ? (place + ', ' + info.region) : info.region;
+            if (locDisplay) locDisplay.textContent = country ? (place + ' • ' + country) : (place || '—');
+
+            try {
+                const wr = await fetch('https://api.open-meteo.com/v1/forecast?latitude=' + info.lat + '&longitude=' + info.lon + '&current_weather=true&timezone=auto');
+                const wd = await wr.json();
+                const cw = wd.current_weather || {};
+                const temp = Math.round(cw.temperature);
+                const code = (cw.weathercode != null) ? cw.weathercode : 0;
+                const isDay = (cw.is_day != null) ? cw.is_day : 1;
+                const tempEl = document.getElementById('tempValue');
+                if (tempEl && !isNaN(temp)) tempEl.textContent = temp;
+                const w = WEATHER[code] || ['Sincronizando', 'Sincronizando', '🌎', '🌎'];
+                if (condDisplay) condDisplay.textContent = es ? w[1] : w[0];
+                const iconEl = document.getElementById('weatherIcon');
+                if (iconEl) iconEl.textContent = isDay ? w[2] : w[3];
+            } catch (e) {}
         }
         fetchLocationAndWeather();
 
