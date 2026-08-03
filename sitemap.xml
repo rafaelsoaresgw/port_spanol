@@ -6,8 +6,9 @@
 
     <!-- ================================================
          SITEMAP — RSO DIGITAL
-         Atualizado em: 2026-07-31
+         Atualizado em: 2026-08-01
          Dominio: https://rsomarketing.com
+         URLs canonicas: sem extensao .html
          ================================================ -->
 
     <url>
@@ -18,59 +19,71 @@
             <image:loc>https://rsomarketing.com/assets/og-preview.jpg</image:loc>
             <image:title>RSO Digital — Criacao de sites premium e SEO</image:title>
         </image:image>
-        <lastmod>2026-07-31</lastmod>
+        <lastmod>2026-08-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://rsomarketing.com/criacao-de-sites.html</loc>
-        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rsomarketing.com/criacao-de-sites.html"/>
-        <lastmod>2026-07-31</lastmod>
+        <loc>https://rsomarketing.com/criacao-de-sites</loc>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rsomarketing.com/criacao-de-sites"/>
+        <lastmod>2026-08-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
-        <loc>https://rsomarketing.com/seo-para-empresas.html</loc>
-        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rsomarketing.com/seo-para-empresas.html"/>
-        <lastmod>2026-07-31</lastmod>
+        <loc>https://rsomarketing.com/seo-para-empresas</loc>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rsomarketing.com/seo-para-empresas"/>
+        <lastmod>2026-08-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
-        <loc>https://rsomarketing.com/design-premium.html</loc>
-        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rsomarketing.com/design-premium.html"/>
-        <lastmod>2026-07-31</lastmod>
+        <loc>https://rsomarketing.com/design-premium</loc>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rsomarketing.com/design-premium"/>
+        <lastmod>2026-08-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
-        <loc>https://rsomarketing.com/contato.html</loc>
-        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rsomarketing.com/contato.html"/>
-        <lastmod>2026-07-31</lastmod>
+        <loc>https://rsomarketing.com/contato</loc>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rsomarketing.com/contato"/>
+        <lastmod>2026-08-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://rsomarketing.com/blog/velocidade-site-vende-mais.html</loc>
-        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rsomarketing.com/blog/velocidade-site-vende-mais.html"/>
+        <loc>https://rsomarketing.com/blog/velocidade-site-vende-mais</loc>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rsomarketing.com/blog/velocidade-site-vende-mais"/>
         <image:image>
             <image:loc>https://rsomarketing.com/assets/og-preview.jpg</image:loc>
             <image:title>Velocidade do site vende mais — RSO Digital</image:title>
         </image:image>
-        <lastmod>2026-07-31</lastmod>
+        <lastmod>2026-08-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://rsomarketing.com/politica-de-privacidade.html</loc>
-        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rsomarketing.com/politica-de-privacidade.html"/>
-        <lastmod>2026-07-31</lastmod>
+        <loc>https://rsomarketing.com/blog/quanto-custa-um-site-profissional</loc>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rsomarketing.com/blog/quanto-custa-um-site-profissional"/>
+        <image:image>
+            <image:loc>https://rsomarketing.com/assets/og-preview.jpg</image:loc>
+            <image:title>Quanto custa um site profissional em 2026 — RSO Digital</image:title>
+        </image:image>
+        <lastmod>2026-08-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://rsomarketing.com/politica-de-privacidade</loc>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rsomarketing.com/politica-de-privacidade"/>
+        <lastmod>2026-08-01</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>

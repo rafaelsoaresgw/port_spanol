@@ -1,0 +1,18 @@
+# ================================================
+# REDIRECTS — RSO DIGITAL (Cloudflare Pages)
+# Consolida sinais de SEO na versao limpa (sem .html)
+# ================================================
+
+# Paginas antigas com .html -> URL canonica limpa
+/criacao-de-sites.html            /criacao-de-sites            301
+/seo-para-empresas.html           /seo-para-empresas           301
+/design-premium.html              /design-premium              301
+/contato.html                     /contato                     301
+/obrigado.html                    /obrigado                    301
+/politica-de-privacidade.html     /politica-de-privacidade     301
+/index.html                       /                            301
+
+# Post do blog: versao antiga na raiz -> caminho canonico /blog/
+/velocidade-site-vende-mais       /blog/velocidade-site-vende-mais  301
+/velocidade-site-vende-mais.html  /blog/velocidade-site-vende-mais  301
+/blog/velocidade-site-vende-mais.html  /blog/velocidade-site-vende-mais  301

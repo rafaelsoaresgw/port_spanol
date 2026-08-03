@@ -1,5 +1,5 @@
 # ==========================================
-# CACHE PARA ARQUIVOS ESTÁTICOS (1 ANO)
+# CACHE PARA ARQUIVOS ESTATICOS (1 ANO)
 # ==========================================
 
 /*.css
@@ -14,12 +14,38 @@
 /*.json
   Cache-Control: public, max-age=31536000, immutable
 
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
 # ==========================================
-# NÃO CACHEAR O HTML (SEMPRE ATUALIZADO)
+# NAO CACHEAR AS PAGINAS (SEMPRE ATUALIZADAS)
+# As URLs canonicas agora sao limpas (sem .html),
+# entao as regras cobrem os dois formatos.
 # ==========================================
 
 /*.html
   Cache-Control: public, max-age=0, must-revalidate
 
 /
+  Cache-Control: public, max-age=0, must-revalidate
+
+/criacao-de-sites
+  Cache-Control: public, max-age=0, must-revalidate
+
+/seo-para-empresas
+  Cache-Control: public, max-age=0, must-revalidate
+
+/design-premium
+  Cache-Control: public, max-age=0, must-revalidate
+
+/contato
+  Cache-Control: public, max-age=0, must-revalidate
+
+/obrigado
+  Cache-Control: public, max-age=0, must-revalidate
+
+/politica-de-privacidade
+  Cache-Control: public, max-age=0, must-revalidate
+
+/blog/*
   Cache-Control: public, max-age=0, must-revalidate
